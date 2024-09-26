@@ -32,8 +32,13 @@ const theme = extendTheme({
         backgroundColor: 'tertiary.800',
         color: 'white', 
         minHeight: '100vh',
+        fontFamily: `'Roboto', sans-serif`,
       },
     },
+  },
+  fonts: {
+    heading: `'Roboto', sans-serif`, 
+    body: `'Roboto', sans-serif`,    
   },
 });
 
