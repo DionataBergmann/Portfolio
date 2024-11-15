@@ -1,9 +1,29 @@
 import { Box, Flex, Heading, Text, HStack, useBreakpointValue } from '@chakra-ui/react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { useState } from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
-export const TimelineItem = ({ title, role, description, techs, date, logo, isLeft, linkedinUrl }) => {
+interface TimelineItemProps {
+  title: string;
+  role: string;
+  description: React.ReactNode[];
+  techs: (string | StaticImageData)[]
+  date: string;
+  logo: string | StaticImageData;
+  isLeft: boolean;
+  linkedinUrl?: string;
+}
+
+export const TimelineItem: React.FC<TimelineItemProps> = ({
+  title,
+  role,
+  description,
+  techs,
+  date,
+  logo,
+  isLeft,
+  linkedinUrl
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const isMobile = useBreakpointValue({ base: true, sm: true, md: true, lg: false });
@@ -111,7 +131,7 @@ export const TimelineItem = ({ title, role, description, techs, date, logo, isLe
         <Heading as="h3" size="lg" color="tertiary.200" fontSize="22px">{title}</Heading>
         <Text fontSize="18px" color="tertiary.200" mb="8px">{role}</Text>
         <Box fontSize="18px" color="gray.300" mb="16px">
-          {description.map((desc, index) => (
+          {description?.map((desc, index) => (
             <Text textAlign='justify' lineHeight={1.6} marginBottom={5} key={index}>● {desc}</Text>
           ))}
         </Box>
