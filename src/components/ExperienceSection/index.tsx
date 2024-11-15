@@ -67,7 +67,7 @@ const ExperienceSection = () => {
           "Trabalho direto com clientes para manutenção contínua e conforme necessário de uma aplicação com usuários internacionais.",
           "Colaboração com equipes ágeis utilizando a metodologia Scrum para garantir a entrega contínua e melhorias iterativas. ",
         ]}
-        date="Dezembro 2021 - Agosto 2024"
+        date="Dezembro 2021 - o Momento"
         techs={[rnLogo, nextJsLogo, tsLogo, nestJsLogo, nodeLogo, graphqlLogo, dockerLogo]}
         logo={brainnyLogo}
         linkedinUrl='https://www.linkedin.com/company/brainnyss/'

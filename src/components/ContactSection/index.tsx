@@ -3,12 +3,16 @@ import emailjs from 'emailjs-com';
 import { Box, Heading, FormControl, FormLabel, Input, Textarea, Button, Flex, useToast, useBreakpointValue } from '@chakra-ui/react';
 
 const ContactSection = () => {
-  const form = useRef(null);
+  const form = useRef<HTMLFormElement | null>(null);
   const toast = useToast();
   const isMobile = useBreakpointValue({ base: true, sm: true, md: true, lg: false });
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!form.current) {
+      return; 
+    }
 
     const user_name = form.current.user_name.value.trim();
     const user_email = form.current.user_email.value.trim();
@@ -25,10 +29,11 @@ const ContactSection = () => {
     }
 
     emailjs
-      .sendForm(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        form.current,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID)
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        form.current!,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!)
       .then(
         () => {
           toast({
@@ -37,7 +42,7 @@ const ContactSection = () => {
             duration: 3000,
             isClosable: true,
           });
-          form.current.reset();
+          form.current!.reset();
         },
         (error) => {
           toast({
@@ -53,7 +58,7 @@ const ContactSection = () => {
   };
 
   return (
-    <Box p={10} bg="tertiary.800" color="white" id="contact" align="center" justify="center">
+    <Box p={10} bg="tertiary.800" color="white" id="contact" >
       <Heading as="h2" fontSize='24px' mb={10} mt={10} textAlign="center">
         Entre em Contato
       </Heading>
