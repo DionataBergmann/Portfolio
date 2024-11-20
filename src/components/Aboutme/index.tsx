@@ -28,7 +28,7 @@ const AboutMe = () => {
           }} />
         <Flex direction="column" maxW={isMobile ? '90%' : "900px"} marginTop= {isMobile ? 5 : 0}>
           <Text fontSize="18px" color="tertiary.100" textAlign="justify" textIndent="2em">
-            Meu primeiro contato com a programação foi em 2015, quando criei um servidor de Minecraft que rapidamente se popularizou. Mas a área de tecnologia não era tão difundida, ainda mais para um jovem do interior. Após concluir o ensino médio em 2017, passei por diversos cursos na tentativa de me encontrar e em 2019 na área da Tecnologia foi onde encontrei a oportunidade de dar vida às minhas ideias e criar soluções inovadoras. Meu objetivo é continuar aprendendo e crescendo como desenvolvedor Frontend, contribuindo para a criação de produtos digitais que façam a diferença.
+            Meu primeiro contato com a programação foi em 2015, quando criei um servidor de Minecraft que rapidamente se popularizou chegando a 90 players simultâneos. Mas a área de tecnologia não era tão difundida, ainda mais para um jovem do interior. Após concluir o ensino médio em 2017, passei por diversos cursos em busca de algo que realmente me conectasse e em 2019 na área da Tecnologia foi onde encontrei a oportunidade de dar vida às minhas ideias e criar soluções inovadoras. Meu objetivo é continuar aprendendo e crescendo como desenvolvedor Frontend, contribuindo para a criação de produtos digitais que façam a diferença.
           </Text>
         </Flex>
       </Flex>

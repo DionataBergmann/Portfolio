@@ -1,10 +1,10 @@
 export const projectsData = [
   {
-    title: "Portfolio",
-    description: "",
+    title: "Portfólio",
+    description: "Meu Portfólio é uma aplicação moderna e interativa, projetada para destacar minhas habilidades, experiências e projetos como desenvolvedor. Construído com Next.js e React, a plataforma reflete princípios de design responsivo e uma navegação fluida, garantindo uma experiência envolvente para os visitantes.",
     githubLink: "https://github.com/DionataBergmann/Portfolio",
     bgImage: "url('/home.png')",
-    videoUrl: "https://youtu.be/4AeBKZ2KxrE",
+    videoUrl: "https://youtu.be/eao8yqHH3hQ",
   },
   {
     title: "News Hub",
