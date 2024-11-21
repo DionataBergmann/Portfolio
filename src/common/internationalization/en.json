@@ -1,0 +1,142 @@
+{
+  "navigation": {
+    "home": "Home",
+    "experience": "Experience",
+    "education": "Education",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+
+  "greeting": "Hello, I am Dionatã Bergmann!",
+  "description": "Frontend Web and Mobile Developer using React, React Native with TypeScript and JavaScript, integrations in GraphQL and REST. Also supporting Backend in Node and NestJs whenever necessary.",
+  
+  "experience": {
+    "title": "Professional Experience",
+    "bridge": {
+      "title": "Bridge MT as Outsourcing",
+      "role": "Frontend Mobile Developer",
+      "description": [
+        "Working on international projects.",
+        "Development and maintenance of Android and iOS applications using React Native in a codebase of over 8 years.",
+        "Recovery and republication of an obsolete application (SDK 27), making the necessary updates to make it compatible with store requirements (SDK 34).",
+        "Implementation of UX, usability, and responsiveness improvements.",
+        "Redesign of visual identity, including themes, images, and layout.",
+        "Updating libraries and dependencies to ensure compliance with the latest SDK versions, meeting store requirements."
+      ]
+    },
+
+    "brainny": {
+      "title": "Brainny Smart Solutions",
+      "role": "Frontend Developer",
+      "description": [
+        "Worked on over 15 projects with different proposals, including projects with an average of 3,000 daily accesses, ensuring stability, scalability, and performance optimization.",
+        "Full Stack development and maintenance of responsive web and mobile applications using React.js, NextJS, React Native, and NestJS, with a primary focus on Frontend.",
+        "Implementation of UX and usability improvements, focusing on creating intuitive and efficient interfaces.",
+        "Publication and updating of mobile applications on the Play Store and App Store.",
+        "Direct work with clients for continuous maintenance of an application with international users.",
+        "Collaboration with agile teams using Scrum methodology to ensure continuous delivery and iterative improvements."
+      ],
+      "date": "December 2021 - Present"
+    }
+  },
+  
+  "education": {
+    "title": "Academic Background",
+    "senac": {
+      "title": "Senac RS",
+      "role": "Technology in Analysis and Systems Development",
+      "description": [
+        "I developed and improved my skills in Full Stack software development, covering Backend, Web, Mobile, UI/UX.",
+        "🥇 December 2023 - First place overall at the Hackathon with the project ",
+        "🥈 December 2022 - Second place overall at the Hackathon with the project ",
+        "💼 December 2021 - I was invited to intern at Brainny by the company's CTO, who was also my professor and coordinator."
+      ],
+      "date": "March 2020 - December 2023"
+    },
+    "ufpel": {
+      "title": "Federal University of Pelotas",
+      "role": "Computer Engineering",
+      "description": [
+        "Focus on algorithms, logic, and data structures.",
+        "I decided to transfer my focus to the Systems Analysis and Development course at Senac to better align my education with my work opportunities."
+      ],
+      "date": "March 2019 - December 2021"
+    }
+  },
+
+  "projects": {
+    "title": "My Projects",
+    "data": {
+      "0": {
+        "title": "Portfolio",
+        "description": "My Portfolio is a modern and interactive application designed to showcase my skills, experiences, and projects as a developer. Built with Next.js and React, the platform reflects responsive design principles and smooth navigation, ensuring an engaging experience for visitors.",
+        "githubLink": "https://github.com/DionataBergmann/Portfolio",
+        "bgImage": "url('/home.png')",
+        "videoUrl": "https://youtu.be/eao8yqHH3hQ"
+      },
+      "1": {
+        "title": "News Hub",
+        "description": "News Hub is a news portal designed to keep users informed with the latest news in an accessible and engaging way. Built with React and Next.js, the platform integrates public APIs to provide real-time news and weather data. Users can explore news by category, apply filters, and stay updated with current weather forecasts. Leveraging AI through the OpenAI API, NewsHub generates concise summaries of the top five articles in the selected category. These summaries are then converted to audio, allowing users to listen to brief news updates directly on the platform, making it perfect for staying informed anywhere.",
+        "githubLink": "https://github.com/DionataBergmann/NewsHub",
+        "bgImage": "https://img.youtube.com/vi/dVwqEofGZPs/maxresdefault.jpg",
+        "videoUrl": "https://youtu.be/dVwqEofGZPs"
+      },
+      "2": {
+        "title": "Farm Assist App",
+        "description": "Farm Assist App is a mobile application created with React Native. This project aims to provide farm employees with a seamless way to manage and view their daily tasks efficiently. It includes features like task creation through the web system managed by the owner, as well as task creation by the employees themselves and viewing reports on task progress.",
+        "githubLink": "https://github.com/DionataBergmann/AgroFiveStar-APP",
+        "bgImage": "https://img.youtube.com/vi/bKxBzCzjNBg/maxresdefault.jpg",
+        "videoUrl": "https://youtu.be/bKxBzCzjNBg"
+      },
+      "3": {
+        "title": "Farm Assist Web",
+        "description": "Farm Assist is a web application developed with React and NestJS. This project was created to provide farm owners and managers with an efficient way to organize and monitor their employees' daily activities. The web version allows owners to create and manage tasks in real-time as they are performed by employees. It also provides productivity reports in different areas and crops, grain storage management, and user notification creation. With a user-friendly interface, the system ensures more productive and collaborative farm operations.",
+        "githubLink": "https://github.com/DionataBergmann/AgroFiveStar-WEB",
+        "bgImage": "https://img.youtube.com/vi/TQsoWcfyJ8o/maxresdefault.jpg",
+        "videoUrl": "https://youtu.be/TQsoWcfyJ8o"
+      },
+      "4": {
+        "title": "Farm Assist API",
+        "description": "API developed with NestJS, GraphQL, PostgreSQL to meet the needs of the application's frontend, allowing farm owners and managers to monitor and organize their employees' daily activities. The API provides support for real-time task creation and management, productivity reports in different areas and crops, grain storage management, and sending notifications to users. With a robust and efficient architecture, the API offers a solid foundation for the frontend, ensuring that farm operations are managed productively and collaboratively.",
+        "githubLink": "https://github.com/DionataBergmann/AgroFiveStar-API",
+        "bgImage": "url('/insomnia.png')",
+        "videoUrl": "https://www.youtube.com/watch?v=MHcePcAXmBU"
+      },
+      "5": {
+        "title": "Project 6",
+        "description": "Description of Project 6",
+        "githubLink": "https://github.com/seu-repositorio/projeto6",
+        "bgImage": "",
+        "videoUrl": "https://youtu.be/XnSL6JJL2EA"
+      }
+    }
+  },
+
+  "aboutMe": {
+    "title": "About Me",
+    "imageAlt": "Dionatã Bergmann",
+    "description": "My first contact with programming was in 2015, when I created a Minecraft server that quickly became popular, reaching 90 simultaneous players. However, the technology field was not as widespread, especially for a young person from a small town. After finishing high school in 2017, I went through several courses searching for something that truly connected with me, and in 2019, I found the opportunity to bring my ideas to life and create innovative solutions in the technology field. My goal is to continue learning and growing as a Frontend developer, contributing to the creation of digital products that make a difference."
+  },
+
+  "contact": {
+    "title": "Get in Touch",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your Name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your.email@example.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Your Message",
+    "submitButton": "Send",
+    "toastError": "Please fill out all fields.",
+    "toastSuccess": "Message sent. Thank you for reaching out!",
+    "toastSendError": "Error sending the message."
+  },
+
+  "cookie": {
+    "alt": "Cookies",
+    "message": "This site uses cookies. By continuing, we assume you agree to the use of cookies as detailed in our",
+    "privacyPolicy": "Privacy Policy",
+    "accept": "Accept"
+  }
+}
