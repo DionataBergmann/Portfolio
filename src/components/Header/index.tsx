@@ -3,6 +3,9 @@ import CustomButton from "../Button";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { RxHamburgerMenu } from "react-icons/rx";
+import Flag from "react-world-flags";
+import { useTranslation } from "react-i18next";
+import { t } from "i18next";
 
 function Header() {
   const [activeButton, setActiveButton] = useState<string | null>('home');
@@ -41,7 +44,7 @@ function Header() {
 
   useEffect(() => {
     const sections = document.querySelectorAll(".observe-section");
-  
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -52,14 +55,14 @@ function Header() {
       },
       {
         threshold: 0.5,
-        rootMargin: "0px 0px -10% 0px", 
+        rootMargin: "0px 0px -10% 0px",
       }
     );
-  
+
     sections.forEach((section) => {
       observer.observe(section);
     });
-  
+
     return () => {
       sections.forEach((section) => {
         observer.unobserve(section);
@@ -67,14 +70,51 @@ function Header() {
     };
   }, []);
 
+  const { i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "en" ? "pt-BR" : "en";
+    i18n.changeLanguage(newLang);
+  };
+
   const renderButtons = () => (
     <>
-      <CustomButton text="Home" scrollToId="home" isActive={activeButton === "home"} onActivate={() => handleActivate("home")} />
-      <CustomButton text="Experiências" scrollToId="experiencia" isActive={activeButton === "experiencia"} onActivate={() => handleActivate("experiencia")} />
-      <CustomButton text="Educação" scrollToId="educacao" isActive={activeButton === "educacao"} onActivate={() => handleActivate("educacao")} />
-      <CustomButton text="Projetos" scrollToId="projetos" isActive={activeButton === "projetos"} onActivate={() => handleActivate("projetos")} />
-      <CustomButton text="Sobre" scrollToId="sobre" isActive={activeButton === "sobre"} onActivate={() => handleActivate("sobre")} />
-      <CustomButton text="Contato" scrollToId="contato" isActive={activeButton === "contato"} onActivate={() => handleActivate("contato")} />
+      <CustomButton
+        text={t("navigation.home")} 
+        scrollToId="home"
+        isActive={activeButton === "home"}
+        onActivate={() => handleActivate("home")}
+      />
+      <CustomButton
+        text={t("navigation.experience")} 
+        scrollToId="experiencia"
+        isActive={activeButton === "experiencia"}
+        onActivate={() => handleActivate("experiencia")}
+      />
+      <CustomButton
+        text={t("navigation.education")} 
+        scrollToId="educacao"
+        isActive={activeButton === "educacao"}
+        onActivate={() => handleActivate("educacao")}
+      />
+      <CustomButton
+        text={t("navigation.projects")} 
+        scrollToId="projetos"
+        isActive={activeButton === "projetos"}
+        onActivate={() => handleActivate("projetos")}
+      />
+      <CustomButton
+        text={t("navigation.about")} 
+        scrollToId="sobre"
+        isActive={activeButton === "sobre"}
+        onActivate={() => handleActivate("sobre")}
+      />
+      <CustomButton
+        text={t("navigation.contact")} 
+        scrollToId="contato"
+        isActive={activeButton === "contato"}
+        onActivate={() => handleActivate("contato")}
+      />
     </>
   );
 
@@ -92,39 +132,49 @@ function Header() {
       justifyContent={isMobile ? "space-between" : "space-around"}
       boxShadow="md"
     >
-      <Box>
+      <Box
+        display="flex"
+        flexDirection="row"
+        alignItems="center"
+        cursor="pointer"
+        onClick={toggleLanguage}>
+        {i18n.language === "en" ?
+          <Flag code="BR" style={{ width: 30, height: 20, marginRight: 8, marginLeft: 4 }} />
+          :
+          <Flag code="US" style={{ width: 30, height: 20, marginRight: 8, marginLeft: 4 }} />
+        }
         <Text fontSize="16px" fontWeight="bold" color="white">
           Dionatã Bergmann
         </Text>
       </Box>
       <Flex>
-      {isMobile ? (
-        <>
-          <IconButton
-            aria-label="Open Menu"
-            icon={<RxHamburgerMenu />}
-            onClick={onOpen}
-            bg="transparent"
-            color='white'
-          />
-          <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
-            <DrawerOverlay />
-            <DrawerContent bgColor='tertiary.900'>
-              <DrawerCloseButton />
-              <DrawerHeader>Menu</DrawerHeader>
-              <DrawerBody>
-                <VStack spacing={4} align="start">
-                  {renderButtons()}
-                </VStack>
-              </DrawerBody>
-            </DrawerContent>
-          </Drawer>
-        </>
-      ) : (
-        <Flex>
-          {renderButtons()}
-        </Flex>
-      )}
+        {isMobile ? (
+          <>
+            <IconButton
+              aria-label="Open Menu"
+              icon={<RxHamburgerMenu />}
+              onClick={onOpen}
+              bg="transparent"
+              color='white'
+            />
+            <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
+              <DrawerOverlay />
+              <DrawerContent bgColor='tertiary.900'>
+                <DrawerCloseButton />
+                <DrawerHeader>Menu</DrawerHeader>
+                <DrawerBody>
+                  <VStack spacing={4} align="start">
+                    {renderButtons()}
+                  </VStack>
+                </DrawerBody>
+              </DrawerContent>
+            </Drawer>
+          </>
+        ) : (
+          <Flex>
+            {renderButtons()}
+          </Flex>
+        )}
       </Flex>
     </Flex>
   );
