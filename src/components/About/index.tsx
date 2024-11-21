@@ -82,10 +82,10 @@ const About = () => {
       <Text fontSize="24px" fontWeight="bold" color="white" mt={10} align="center" maxW="90%">
         {t("greeting")}
       </Text>
-      <Text fontSize="lg" color="white" textAlign="center" w="80%">
+      <Text fontSize="lg" color="white" textAlign={["justify", "center"]} w={{ base: "90%", md: "80%" }} lineHeight={1.6}>
         {t("description")}
       </Text>
-    </Flex>
+    </Flex >
   );
 };
 

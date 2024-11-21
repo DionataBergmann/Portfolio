@@ -30,8 +30,18 @@ const AboutMe = () => {
             marginTop: isMobile ? 40 : 0,
           }}
         />
-        <Flex direction="column" maxW={isMobile ? '90%' : "900px"} marginTop={isMobile ? 5 : 0}>
-          <Text fontSize="18px" color="tertiary.100" textAlign="justify" textIndent="2em">
+        <Flex
+          direction="column"
+          maxW={isMobile ? '95%' : "900px"}
+          mt={isMobile ? 5 : 0}
+        >
+          <Text
+            fontSize="18px"
+            color="tertiary.100"
+            textAlign="justify"
+            lineHeight={1.8} 
+            textIndent={isMobile ? "1em" : "2em"} 
+          >
             {t('aboutMe.description')}
           </Text>
         </Flex>
