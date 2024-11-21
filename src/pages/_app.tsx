@@ -3,6 +3,7 @@ import { ChakraProvider, Flex } from '@chakra-ui/react';
 import Header from '@/components/Header';
 import theme from "../theme/theme";
 import CookiePopup from '@/components/CookiePopup';
+import "../common/internationalization/i18n";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
