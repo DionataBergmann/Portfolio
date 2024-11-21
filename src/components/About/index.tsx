@@ -5,11 +5,14 @@ import androidLogo from '../../../public/android.png';
 import windowsLogo from '../../../public/windows.png';
 import personalPicture from '../../../public/personalPicture2.png';
 import { useRouter } from 'next/router';
+import { useTranslation } from "react-i18next";
 
 const About = () => {
   const router = useRouter();
   const isMobile = useBreakpointValue({ base: true, sm: false, md: false });
-  
+
+  const { t } = useTranslation();
+
   return (
     <Flex direction="column" alignItems="center" mt={24} position="relative" height="250px" mb={370} >
       <Box
@@ -76,11 +79,11 @@ const About = () => {
         }}
       />
 
-      <Text fontSize="24px" fontWeight="bold" color="white" mt={10} align='center' maxW='90%'>
-        Olá eu sou o Dionatã Bergmann!
+      <Text fontSize="24px" fontWeight="bold" color="white" mt={10} align="center" maxW="90%">
+        {t("greeting")}
       </Text>
-      <Text fontSize="lg" color="white" textAlign="center" w='80%'>
-        Desenvolvedor Frontend Web e Mobile utilizando React, React Native com TypeScript e JavaScript, integrações em GraphQL e REST. Também apoiando no Backend em Node e NestJs sempre que necessário.
+      <Text fontSize="lg" color="white" textAlign="center" w="80%">
+        {t("description")}
       </Text>
     </Flex>
   );

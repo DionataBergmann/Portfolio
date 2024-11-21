@@ -1,19 +1,24 @@
-import { Box, Flex, Heading, Text, Image } from '@chakra-ui/react';
+import React from 'react';
+import { Box, Flex, Heading } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import { TimelineItem } from '../Timeline';
-import ufpelLogo from '../../../public/ufpel.png';
 import senacLogo from '../../../public/senac.jpg';
+import ufpelLogo from '../../../public/ufpel.png';
 
 const EducationSection = () => {
+  const { t } = useTranslation();
+
   return (
-    <Flex direction="column"
+    <Flex
+      direction="column"
       alignItems="center"
       p="40px"
       position="relative"
       maxW="900px"
       mx="auto"
     >
-      <Heading as="h2" fontSize="24px" mb={16} textAlign="center" color='white'>
-        Formação Acadêmica
+      <Heading as="h2" fontSize="24px" mb={16} textAlign="center" color="white">
+        {t('education.title')}
       </Heading>
       <Box
         mt={5}
@@ -26,39 +31,47 @@ const EducationSection = () => {
         zIndex={1}
       />
       <TimelineItem
-        title="Senac RS"
-        role="Tecnologia em Análise e Desenvolvimento de Sistemas"
+        title={t('education.senac.title')}
+        role={t('education.senac.role')}
         description={[
-          "Desenvolvi e aperfeiçoei minhas habilidades em desenvolvimento de software Full Stack, abrangendo Backend, Web, Mobile, UI/UX.",
+          t('education.senac.description.0'),
           <>
-            🥇 Dezembro de 2023 - Primeiro lugar geral no Hackathon com o projeto
-            <a style={{marginLeft: 5, textDecoration:'underline'}} href="https://github.com/neto-virtual/NetoExtension" target="_blank" rel="noopener noreferrer">
+            {t('education.senac.description.1')}
+            <a
+              style={{ marginLeft: 5, textDecoration: 'underline' }}
+              href="https://github.com/neto-virtual/NetoExtension"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Neto Virtual
-            </a>.
+            </a>
+            .
           </>,
           <>
-            🥈 Dezembro de 2022 - Segundo lugar geral no Hackathon com o projeto 
-            <a style={{marginLeft: 5, textDecoration:'underline'}} href="https://github.com/DionataBergmann/easilyMobile" target="_blank" rel="noopener noreferrer" >
-               Easily
-            </a>.
+            {t('education.senac.description.2')}
+            <a
+              style={{ marginLeft: 5, textDecoration: 'underline' }}
+              href="https://github.com/DionataBergmann/easilyMobile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Easily
+            </a>
+            .
           </>,
-          "💼 Dezembro de 2021 - Fui convidado a estagiar na Brainny pelo CTO da empresa, que também foi meu professor e coordenador."
+          t('education.senac.description.3')
         ]}
-        date="Março 2020 - Dezembro 2023"
+        date={t('education.senac.date')}
         techs={[]}
         logo={senacLogo}
         linkedinUrl=""
         isLeft={false}
       />
       <TimelineItem
-        title="Universidade Federal de Pelotas"
-        role="Engenharia de Computação"
-        description={[
-          "Foco em algoritmos, lógica, estruturas de dados.",
-          "Decidi transferir meu foco para o curso de Análise e Desenvolvimento de Sistemas no Senac, para alinhar melhor minha formação com minhas oportunidades de trabalho."
-        ]}
-
-        date="Março 2019 - Dezembro 2021"
+        title={t('education.ufpel.title')}
+        role={t('education.ufpel.role')}
+        description={t('education.ufpel.description', { returnObjects: true }) as string[]}
+        date={t('education.ufpel.date')}
         techs={[]}
         logo={ufpelLogo}
         linkedinUrl="https://www.linkedin.com/school/universidade-federal-de-pelotas/"

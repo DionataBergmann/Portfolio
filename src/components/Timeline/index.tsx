@@ -132,7 +132,17 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
         <Text fontSize="18px" color="tertiary.200" mb="8px">{role}</Text>
         <Box fontSize="18px" color="gray.300" mb="16px">
           {description?.map((desc, index) => (
-            <Text textAlign='justify' lineHeight={1.6} marginBottom={5} key={index}>● {desc}</Text>
+            <Text
+              key={index}
+              textAlign="justify"
+              style={{ textAlignLast: "left" }}
+              lineHeight={1.5}
+              marginBottom={5}
+              pl={4}
+            >
+              <span style={{ display: "inline-block",  textIndent: "-1rem" }}>●</span>
+              {desc}
+            </Text>
           ))}
         </Box>
         <Text fontSize="14px" color="gray.500" mb="16px">{date}</Text>

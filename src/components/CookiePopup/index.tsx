@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Box, Text, Flex, Button } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import cookieImage from '../../../public/cookie.png';
 
 const CookiePopup = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -18,7 +20,7 @@ const CookiePopup = () => {
 
         setTimeout(() => {
           setIsAnimating(true);
-        }, 100); 
+        }, 100);
       }, 5000);
 
       return () => {
@@ -31,12 +33,6 @@ const CookiePopup = () => {
     localStorage.setItem('cookiesAccepted', 'true');
     setIsAnimating(false);
     setTimeout(() => setIsVisible(false), 300);
-  };
-
-  const handleDecline = () => {
-    localStorage.setItem('cookiesAccepted', 'false');
-    setIsAnimating(false);
-    setTimeout(() => setIsVisible(false), 300); 
   };
 
   if (!isVisible) {
@@ -53,24 +49,36 @@ const CookiePopup = () => {
       color="black"
       zIndex="1000"
       boxShadow="md"
-      opacity={isAnimating ? 1 : 0} 
-      transition="opacity 1s ease-in-out" 
+      opacity={isAnimating ? 1 : 0}
+      transition="opacity 1s ease-in-out"
     >
       <Flex alignItems="center" justifyContent="space-between">
         <Flex alignItems="center" ml={3}>
           <Image
             src={cookieImage}
-            alt="Cookies"
+            alt={t('cookie.alt')}
             width={50}
             height={50}
           />
-          <Text fontSize="small" color='tertiary.800'>
-            Este site utiliza cookies. Ao continuar, assumimos que você concorda com o uso de cookies conforme detalhado em nossa <Text as="span" color='tertiary.300' cursor="pointer">Política de Privacidade</Text>.
+          <Text fontSize="small" color="tertiary.800">
+            {t('cookie.message')}{' '}
+            <Text as="span" color="tertiary.300" cursor="pointer">
+              {t('cookie.privacyPolicy')}
+            </Text>
+            .
           </Text>
         </Flex>
         <Flex alignItems="center">
-          <Button backgroundColor='tertiary.800' color='white' size='sm' mr={5} ml={2} onClick={handleAccept} _hover={{backgroundColor: 'tertiary.300'}}>
-            Entendi
+          <Button
+            backgroundColor="tertiary.800"
+            color="white"
+            size="sm"
+            mr={5}
+            ml={2}
+            onClick={handleAccept}
+            _hover={{ backgroundColor: 'tertiary.300' }}
+          >
+            {t('cookie.accept')}
           </Button>
         </Flex>
       </Flex>

@@ -1,8 +1,21 @@
 import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
-import { Box, Heading, FormControl, FormLabel, Input, Textarea, Button, Flex, useToast, useBreakpointValue } from '@chakra-ui/react';
+import {
+  Box,
+  Heading,
+  FormControl,
+  FormLabel,
+  Input,
+  Textarea,
+  Button,
+  Flex,
+  useToast,
+  useBreakpointValue,
+} from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 
 const ContactSection = () => {
+  const { t } = useTranslation();
   const form = useRef<HTMLFormElement | null>(null);
   const toast = useToast();
   const isMobile = useBreakpointValue({ base: true, sm: true, md: true, lg: false });
@@ -11,7 +24,7 @@ const ContactSection = () => {
     e.preventDefault();
 
     if (!form.current) {
-      return; 
+      return;
     }
 
     const user_name = form.current.user_name.value.trim();
@@ -20,7 +33,7 @@ const ContactSection = () => {
 
     if (!user_name || !user_email || !message) {
       toast({
-        description: 'Por favor, preencha todos os campos.',
+        description: t('contact.toastError'),
         status: 'error',
         duration: 3000,
         isClosable: true,
@@ -33,11 +46,12 @@ const ContactSection = () => {
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         form.current!,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!)
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
+      )
       .then(
         () => {
           toast({
-            description: 'Mensagem enviada. Obrigado por entrar em contato!',
+            description: t('contact.toastSuccess'),
             status: 'success',
             duration: 3000,
             isClosable: true,
@@ -46,40 +60,39 @@ const ContactSection = () => {
         },
         (error) => {
           toast({
-            title: 'Erro ao enviar a mensagem.',
+            title: t('contact.toastSendError'),
             description: error.text,
             status: 'error',
-
             duration: 5000,
             isClosable: true,
           });
-        },
+        }
       );
   };
 
   return (
     <Box p={10} bg="tertiary.800" color="white" id="contact" >
       <Heading as="h2" fontSize='24px' mb={10} mt={10} textAlign="center">
-        Entre em Contato
+        {t('contact.title')}
       </Heading>
       <Flex direction={{ base: 'column', md: 'row' }} width={isMobile ? '90%' : "40vw"} mx="auto">
         <Box flex="1" mr={{ md: 8 }} mb={{ base: 8, md: 0 }}>
           <form ref={form} onSubmit={sendEmail}>
             <FormControl id="name" mb={4}>
-              <FormLabel>Nome</FormLabel>
-              <Input placeholder="Seu Nome" name="user_name" />
+              <FormLabel>{t('contact.nameLabel')}</FormLabel>
+              <Input placeholder={t('contact.namePlaceholder')} name="user_name" />
             </FormControl>
             <FormControl id="email" mb={4}>
-              <FormLabel>Email</FormLabel>
-              <Input type="email" placeholder="seu.email@exemplo.com" name="user_email" />
+              <FormLabel>{t('contact.emailLabel')}</FormLabel>
+              <Input type="email" placeholder={t('contact.emailPlaceholder')} name="user_email" />
             </FormControl>
             <FormControl id="message" mb={4}>
-              <FormLabel>Mensagem</FormLabel>
-              <Textarea placeholder="Sua Mensagem" name="message" />
+              <FormLabel>{t('contact.messageLabel')}</FormLabel>
+              <Textarea placeholder={t('contact.messagePlaceholder')} name="message" />
             </FormControl>
             <Flex flex={1} align='start'>
               <Button size='sm' bgColor='white' color='#000040' type="submit" width="30%">
-                Enviar
+                {t('contact.submitButton')}
               </Button>
             </Flex>
           </form>
