@@ -12,7 +12,7 @@ const EducationSection = () => {
     <Flex
       direction="column"
       alignItems="center"
-      p="40px"
+      p={['15px', '40px']}
       position="relative"
       maxW="900px"
       mx="auto"

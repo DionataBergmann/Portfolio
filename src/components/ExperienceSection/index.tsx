@@ -22,7 +22,7 @@ const ExperienceSection = () => {
     <Flex
       direction="column"
       alignItems="center"
-      p={['20px', '40px']}
+      p={['15px', '40px']}
       position="relative"
       maxW="900px"
       mx="auto"
