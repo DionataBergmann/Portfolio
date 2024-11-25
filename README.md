@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio
+My Portfolio is a modern and interactive application designed to showcase my skills, experiences, and projects as a developer. Built with Next.js and React, the platform reflects responsive design principles and smooth navigation, ensuring an engaging experience for visitors.
+
+# Demo
+https://dionatabergmann.vercel.app
+
+[YouTube Video](https://www.youtube.com/watch?v=TEU5gEqXnQg&t)
 
 ## Getting Started
 
