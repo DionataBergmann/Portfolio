@@ -1,4 +1,4 @@
-import { Box, Text, Button, Flex, Modal, ModalOverlay, ModalContent, ModalBody, ModalCloseButton, useDisclosure } from '@chakra-ui/react';
+import { Box, Text, Button, Flex, Modal, ModalOverlay, ModalContent, ModalBody, ModalCloseButton, useDisclosure, useBreakpointValue } from '@chakra-ui/react';
 import { FaGithub } from 'react-icons/fa';
 import { MdSlowMotionVideo } from 'react-icons/md';
 import { RxExternalLink } from 'react-icons/rx';
@@ -24,6 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   bgImage,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const isMobile = useBreakpointValue({ base: true, sm: true, md: false });
 
   const handleOpen = () => {
     onOpen();
@@ -39,8 +40,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         w="100%"
         h="250px"
         bgImage={bgImage}
-        bgSize="cover" 
-        bgPosition="center" 
+        bgSize="cover"
+        bgPosition="center"
         bgRepeat="no-repeat"
         borderRadius="md"
         position="relative"
@@ -69,15 +70,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           _groupHover={{ opacity: 1 }}
         >
           <Flex flexDirection='row' >
-            <Button
-              leftIcon={<MdSlowMotionVideo />}
-              colorScheme="gray"
-              variant="solid"
-              size='sm'
-              onClick={handleOpen}
-            >
-              Demo
-            </Button>
+            {videoUrl &&
+              <Button
+                leftIcon={<MdSlowMotionVideo />}
+                colorScheme="gray"
+                variant="solid"
+                size='sm'
+                onClick={handleOpen}
+              >
+                Demo
+              </Button>
+            }
             <Button
               leftIcon={<FaGithub />}
               rightIcon={<RxExternalLink />}
@@ -105,9 +108,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         />
         <ModalContent minW={[350, 550, 700, 900, 1200]} bgColor='tertiary.800'>
           <ModalCloseButton zIndex={1} color='white' />
-          <ModalBody p={10} display="flex" alignItems="center" justifyContent="center" bgColor='tertiary.800' rounded={15}>
+          <ModalBody p={isMobile ? 2 : 10} display="flex" alignItems="center" justifyContent="center" bgColor='tertiary.800' rounded={15}>
             <Box flexDir='column' w='100%' display="flex" alignItems="center" justifyContent="center">
-              <Box display="flex" flexDir="row" alignItems="center" mt={-3}>
+              <Box display="flex" flexDir="row" alignItems="center" mt={isMobile ? 0 : -3} ml={isMobile ? 14 : 0}>
                 <Text fontWeight="bold" textDecoration='underline'>
                   {title}
                 </Text>
@@ -119,15 +122,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   ml={-4}
                 />
               </Box>
-            <Box borderBottom='1px solid' mb={5} p={2}>
-            <Text textAlign='justify' textIndent="30px">
-                {description}
-              </Text>
-            </Box>
+              { description &&
+                <Box borderBottom='1px solid' mb={5} p={2}>
+                  <Text textAlign='justify' textIndent="30px">
+                    {description}
+                  </Text>
+                </Box>
+              }
               <ReactPlayer
                 url={videoUrl}
                 width="90%"
-                height="60vh"
+                height={isMobile ? "30vh" : "60vh"}
                 controls={true}
                 playing={isOpen}
               />
