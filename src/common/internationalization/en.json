@@ -104,11 +104,11 @@
         "videoUrl": "https://www.youtube.com/watch?v=MHcePcAXmBU"
       },
       "5": {
-        "title": "Project 6",
-        "description": "Description of Project 6",
-        "githubLink": "https://github.com/seu-repositorio/projeto6",
+        "title": "More Projects",
+        "description": "Visit my GitHub repository to explore more of my projects.",
+        "githubLink": "https://github.com/DionataBergmann",
         "bgImage": "",
-        "videoUrl": "https://youtu.be/XnSL6JJL2EA"
+        "videoUrl": ""
       }
     }
   },

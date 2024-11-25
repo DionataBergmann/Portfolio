@@ -39,10 +39,10 @@ export const projectsData = [
     videoUrl: "https://www.youtube.com/watch?v=MHcePcAXmBU",
   },
   {
-    title: "Projeto 6",
-    description: "Descrição do Projeto 6",
-    githubLink: "https://github.com/seu-repositorio/projeto6",
+    title: "Veja mais projetos",
+    description: "Acesse meu repositório no GitHub para explorar mais projetos.",
+    githubLink: "https://github.com/DionataBergmann",
     bgImage: "",
-    videoUrl: "https://youtu.be/XnSL6JJL2EA",
+    videoUrl: "",
   },
 ];
