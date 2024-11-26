@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, IconButton, Link, Text, useBreakpointValue } from "@chakra-ui/react";
 import Image from 'next/image';
 import iosLogo from '../../../public/ios.png';
 import androidLogo from '../../../public/android.png';
@@ -6,10 +6,11 @@ import windowsLogo from '../../../public/windows.png';
 import personalPicture from '../../../public/personalPicture2.png';
 import { useRouter } from 'next/router';
 import { useTranslation } from "react-i18next";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const About = () => {
   const router = useRouter();
-  const isMobile = useBreakpointValue({ base: true, sm: false, md: false });
+  const isMobile = useBreakpointValue({ base: true, sm: true, md: false });
 
   const { t } = useTranslation();
 
@@ -85,6 +86,39 @@ const About = () => {
       <Text fontSize="lg" color="white" textAlign={["justify", "center"]} w={{ base: "90%", md: "80%" }} lineHeight={1.6}>
         {t("description")}
       </Text>
+
+      <HStack spacing={6} mt={isMobile ? 2 : 6}>
+        <Link href="https://www.instagram.com/dionatabergmann/" isExternal>
+          <IconButton
+            aria-label="Instagram"
+            icon={<FaInstagram />}
+            variant="ghost"
+            color="white"
+            _hover={{ color: 'gray.400', transform: 'scale(1.2)' }}
+            fontSize="26px"
+          />
+        </Link>
+        <Link href="https://www.linkedin.com/in/dionat%C3%A3-bergmann-a98387208/" isExternal>
+          <IconButton
+            aria-label="LinkedIn"
+            icon={<FaLinkedin />}
+            variant="ghost"
+            color="white"
+            _hover={{ color: 'gray.400', transform: 'scale(1.2)' }}
+            fontSize="26px"
+          />
+        </Link>
+        <Link href="https://github.com/DionataBergmann" isExternal>
+          <IconButton
+            aria-label="GitHub"
+            icon={<FaGithub />}
+            variant="ghost"
+            color="white"
+            _hover={{ color: 'gray.400', transform: 'scale(1.2)' }}
+            fontSize="26px"
+          />
+        </Link>
+      </HStack>
     </Flex >
   );
 };
