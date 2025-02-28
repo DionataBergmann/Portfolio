@@ -41,6 +41,16 @@ const ExperienceSection = () => {
       />
 
       <TimelineItem
+        title={t('experience.cigam.title')}
+        role={t('experience.cigam.role')}
+        description={t('experience.cigam.description', { returnObjects: true }) as string[]}
+        date={t('experience.cigam.date')}
+        techs={[rnLogo, tsLogo]}
+        linkedinUrl="https://www.linkedin.com/company/erpcigam/posts/?feedView=all"
+        isLeft={true}
+      />
+
+      <TimelineItem
         title={t('experience.bridge.title')}
         role={t('experience.bridge.role')}
         description={t('experience.bridge.description', { returnObjects: true }) as string[]}
