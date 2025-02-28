@@ -27,7 +27,7 @@
       "description": [
         "Working on international projects.",
         "Development and maintenance of Android and iOS applications using React Native in a codebase of over 9 years.",
-        "Recovery and republication of an obsolete application (SDK 27), making the necessary updates to make it compatible with store requirements (SDK 34).",
+        "Recovery and republication of an obsolete application (SDK 27), making the necessary updates to make it compatible with store requirements.",
         "Implementation of UX, usability, and responsiveness improvements.",
         "Redesign of visual identity, including themes, images, and layout.",
         "Updating libraries and dependencies to ensure compliance with the latest SDK versions, meeting store requirements."
