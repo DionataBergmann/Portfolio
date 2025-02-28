@@ -9,17 +9,25 @@
   },
 
   "greeting": "Hello, I am Dionatã Bergmann!",
-  "description": "Frontend Web and Mobile Developer using React, React Native with TypeScript and JavaScript, integrations in GraphQL and REST. Also supporting Backend in Node and NestJs whenever necessary.",
-  
+  "description": "Frontend Web and Mobile Developer with 3 years of professional experience, working with React, React Native using TypeScript and JavaScript, integrating with GraphQL and REST APIs. Also supporting the Backend with Node and NestJS whenever necessary.",
+
   "experience": {
     "title": "Professional Experience",
+    "cigam": {
+      "title": "CIGAM - Software de Gestão",
+      "role": "Frontend Web Developer",
+      "description": [
+        "Development and maintenance of internal products, focusing on improvements and new features."
+      ],
+      "date": "February 2025 - Present"
+    },
     "bridge": {
       "title": "Bridge MT as Outsourcing",
       "role": "Frontend Mobile Developer",
       "description": [
         "Working on international projects.",
-        "Development and maintenance of Android and iOS applications using React Native in a codebase of over 8 years.",
-        "Recovery and republication of an obsolete application (SDK 27), making the necessary updates to make it compatible with store requirements (SDK 34).",
+        "Development and maintenance of Android and iOS applications using React Native in a codebase of over 9 years.",
+        "Recovery and republication of an obsolete application (SDK 27), making the necessary updates to make it compatible with store requirements.",
         "Implementation of UX, usability, and responsiveness improvements.",
         "Redesign of visual identity, including themes, images, and layout.",
         "Updating libraries and dependencies to ensure compliance with the latest SDK versions, meeting store requirements."
@@ -37,10 +45,10 @@
         "Direct work with clients for continuous maintenance of an application with international users.",
         "Collaboration with agile teams using Scrum methodology to ensure continuous delivery and iterative improvements."
       ],
-      "date": "December 2021 - Present"
+      "date": "December 2021 - February 2025"
     }
   },
-  
+
   "education": {
     "title": "Academic Background",
     "senac": {

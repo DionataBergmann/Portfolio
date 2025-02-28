@@ -2,6 +2,7 @@ import { Box, Flex, Heading, useBreakpointValue } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 
 import bridgeLogo from '../../../public/bridge.png';
+import cigamLogo from '../../../public/cigam.png';
 import brainnyLogo from '../../../public/brainny.png';
 import rnLogo from '../../../public/react_native.png';
 import jsLogo from '../../../public/js.png';
@@ -38,6 +39,17 @@ const ExperienceSection = () => {
         bg="tertiary.500"
         h="90%"
         zIndex={1}
+      />
+
+      <TimelineItem
+        title={t('experience.cigam.title')}
+        role={t('experience.cigam.role')}
+        description={t('experience.cigam.description', { returnObjects: true }) as string[]}
+        date={t('experience.cigam.date')}
+        techs={[rnLogo, tsLogo]}
+        logo={cigamLogo}
+        linkedinUrl="https://www.linkedin.com/company/erpcigam/posts/?feedView=all"
+        isLeft={true}
       />
 
       <TimelineItem
