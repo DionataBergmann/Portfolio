@@ -87,7 +87,7 @@ const About = () => {
         {t("description")}
       </Text>
 
-      <HStack spacing={6} mt={isMobile ? 2 : 6}>
+      <HStack spacing={6} mt={[10, 10, 6, 6]}>
         <Link href="https://www.instagram.com/dionatabergmann/" isExternal>
           <IconButton
             aria-label="Instagram"
