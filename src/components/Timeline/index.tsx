@@ -41,7 +41,7 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
         <Flex
           alignItems="center"
           justifyContent="center"
-          mb="16px"
+          mb="36px"
           bg="primary.800"
           borderRadius="full"
           boxSize="60px"

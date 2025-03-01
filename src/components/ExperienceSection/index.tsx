@@ -24,6 +24,7 @@ const ExperienceSection = () => {
       direction="column"
       alignItems="center"
       p={['15px', '40px']}
+      mt={['150px', 0, 10, 0]}
       position="relative"
       maxW="900px"
       mx="auto"
