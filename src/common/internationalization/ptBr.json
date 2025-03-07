@@ -10,6 +10,7 @@
 
   "greeting": "Olá, eu sou o Dionatã Bergmann!",
   "description": "Desenvolvedor Frontend Web e Mobile com 3 anos de experiência profissional, utilizando React, React Native com TypeScript e JavaScript, integrações em GraphQL e REST. Também apoiando no Backend em Node e NestJs sempre que necessário.",
+  "popover": "Clique para alterar!",
 
   "experience": {
     "title": "Experiência Profissional",

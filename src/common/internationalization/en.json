@@ -10,6 +10,7 @@
 
   "greeting": "Hello, I am Dionatã Bergmann!",
   "description": "Frontend Web and Mobile Developer with 3 years of professional experience, working with React, React Native using TypeScript and JavaScript, integrating with GraphQL and REST APIs. Also supporting the Backend with Node and NestJS whenever necessary.",
+  "popover": "Click to change!",
 
   "experience": {
     "title": "Professional Experience",
@@ -25,7 +26,7 @@
       "title": "Bridge MT as Outsourcing",
       "role": "Frontend Mobile Developer",
       "description": [
-        "Working on international projects.",
+        "Worked on international projects.",
         "Development and maintenance of Android and iOS applications using React Native in a codebase of over 9 years.",
         "Recovery and republication of an obsolete application (SDK 27), making the necessary updates to make it compatible with store requirements.",
         "Implementation of UX, usability, and responsiveness improvements.",
