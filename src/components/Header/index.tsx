@@ -25,6 +25,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import Flag from "react-world-flags";
 import { useTranslation } from "react-i18next";
 import { t } from "i18next";
+import { PulsingClickIcon } from "../PulsingClickIcon";
 
 function Header() {
   const [activeButton, setActiveButton] = useState<string | null>("home");
@@ -43,7 +44,7 @@ function Header() {
 
       closeTimer = setTimeout(() => {
         setIsPopoverOpen(false);
-      }, 3000);
+      }, 5000);
     }, 3000);
 
     return () => {
@@ -166,50 +167,37 @@ function Header() {
       boxShadow="md"
     >
       <Flex alignItems="center">
-        <Popover
-          isOpen={isPopoverOpen}
-          placement="bottom"
-          offset={[10, 10]}
-          closeOnBlur={false}
-          autoFocus={false}
-        >
-          <PopoverTrigger>
-            <Box
-              cursor="pointer"
-              onClick={toggleLanguage}
-              display="flex"
-              alignItems="center"
-            >
-              {i18n.language === "en" ? (
-                <Flag
-                  code="BR"
-                  style={{ width: 30, height: 20, marginRight: 8, marginLeft: 4 }}
-                />
-              ) : (
-                <Flag
-                  code="US"
-                  style={{ width: 30, height: 20, marginRight: 8, marginLeft: 4 }}
-                />
-              )}
-            </Box>
-          </PopoverTrigger>
-
-          <PopoverContent
-            bg="none"
-            color="black"
-            border="1px solid"
-            borderColor="gray.300"
-            boxShadow="md"
-            borderRadius="md"
-            w={152}
-            top={1.5}
+        <Box position="relative" display="flex" alignItems="center">
+          <Box
+            cursor="pointer"
+            onClick={toggleLanguage}
+            display="flex"
+            alignItems="center"
           >
-            <PopoverArrow bg='none'/>
-            <PopoverBody fontSize="sm" fontWeight="bold" color='white' textAlign='center' >
-             {t("popover")}
-            </PopoverBody>
-          </PopoverContent>
-        </Popover>
+            {i18n.language === "en" ? (
+              <Flag
+                code="BR"
+                style={{ width: 30, height: 20, marginRight: 8, marginLeft: 4 }}
+              />
+            ) : (
+              <Flag
+                code="US"
+                style={{ width: 30, height: 20, marginRight: 8, marginLeft: 4 }}
+              />
+            )}
+          </Box>
+          {isPopoverOpen && (
+            <Box
+              position="absolute"
+              top="100%"
+              left="54%"
+              transform="translateX(-50%)"
+              mt="2px"
+            >
+              <PulsingClickIcon />
+            </Box>
+          )}
+        </Box>
 
         <Text ml={1} fontSize="16px" fontWeight="bold" color="white">
           Dionatã Bergmann
