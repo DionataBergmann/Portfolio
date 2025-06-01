@@ -30,6 +30,14 @@ export const projectsData = [
     bgImage: "https://img.youtube.com/vi/TQsoWcfyJ8o/maxresdefault.jpg",
     videoUrl: "https://youtu.be/TQsoWcfyJ8o",
   },
+   {
+    title: "Bytebank",
+    description:
+      "Bytebank é um projeto web desenvolvido para a fase 1 do meu MBA em Engenharia Frontend na FIAP. Desenvolvido utilizando React, Next.js, Tailwind CSS, Material UI.",
+    githubLink: "https://github.com/DionataBergmann/Bytebank",
+    bgImage: "https://img.youtube.com/vi/SjfjRfZSjK0/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=SjfjRfZSjK0",
+  },
   {
     title: "Farm Assist API",
     description:
@@ -37,12 +45,5 @@ export const projectsData = [
     githubLink: "https://github.com/DionataBergmann/AgroFiveStar-API",
     bgImage: "url('/insomnia.png')",
     videoUrl: "https://www.youtube.com/watch?v=MHcePcAXmBU",
-  },
-  {
-    title: "Veja mais projetos",
-    description: "Acesse meu repositório no GitHub para explorar mais projetos.",
-    githubLink: "https://github.com/DionataBergmann",
-    bgImage: "",
-    videoUrl: "",
-  },
+  }
 ];
