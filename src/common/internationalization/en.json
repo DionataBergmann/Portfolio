@@ -18,7 +18,8 @@
       "title": "CIGAM - Software de Gestão",
       "role": "Frontend Web Developer",
       "description": [
-        "Development and maintenance of internal products, focusing on improvements and new features."
+        "Development and maintenance of internal web systems using React and TypeScript.",
+        "Working on improvements, bug fixes, and new features in corporate solutions used by large companies with a high user volume."
       ],
       "date": "February 2025 - Present"
     },
@@ -116,7 +117,7 @@
         "bgImage": "https://img.youtube.com/vi/TQsoWcfyJ8o/maxresdefault.jpg",
         "videoUrl": "https://youtu.be/TQsoWcfyJ8o"
       },
-       "4": {
+      "4": {
         "title": "Bytebank",
         "description": "Bytebank is a web project developed for Phase 1 of my MBA in Frontend Engineering at FIAP. Built using React, Next.js, Tailwind CSS, and Material UI.",
         "githubLink": "https://github.com/DionataBergmann/Bytebank",
