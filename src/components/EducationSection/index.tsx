@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { TimelineItem } from '../Timeline';
 import senacLogo from '../../../public/senac.jpg';
 import ufpelLogo from '../../../public/ufpel.png';
+import fiapLogo from '../../../public/fiap.png';
 
 const EducationSection = () => {
   const { t } = useTranslation();
@@ -29,6 +30,16 @@ const EducationSection = () => {
         bg='tertiary.500'
         h="85%"
         zIndex={1}
+      />
+       <TimelineItem
+        title={t('education.fiap.title')}
+        role={t('education.fiap.role')}
+        description={t('education.fiap.description', { returnObjects: true }) as string[]}
+        date={t('education.fiap.date')}
+        techs={[]}
+        logo={fiapLogo}
+        linkedinUrl="https://www.linkedin.com/school/fiap/"
+        isLeft={true}
       />
       <TimelineItem
         title={t('education.senac.title')}

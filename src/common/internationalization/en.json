@@ -52,6 +52,17 @@
 
   "education": {
     "title": "Academic Background",
+    "fiap": {
+      "title": "FIAP",
+      "role": "MBA in Frontend Engineering",
+      "description": [
+        "Hands-on specialization in front-end engineering, focusing on software architecture, performance, testing, accessibility, and API integration.",
+        "Proficiency in technologies such as React, Next.js, TypeScript, Angular, Docker, AWS, and Flutter.",
+        "Project development using agile methodologies, continuous integration, and cloud deployment.",
+        "Creation of complete applications, from design system to cloud publishing, leveraging microfrontends and modern DevOps practices."
+      ],
+      "date": "March 2025 - December 2025"
+    },
     "senac": {
       "title": "Senac RS",
       "role": "Technology in Analysis and Systems Development",

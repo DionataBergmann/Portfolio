@@ -51,6 +51,17 @@
 
   "education": {
     "title": "Formação Acadêmica",
+    "fiap": {
+      "title": "FIAP",
+      "role": "MBA em Frontend Engineering",
+      "description": [
+        "Especialização prática em engenharia front-end, com foco em arquitetura de software, performance, testes, acessibilidade e integração com APIs.",
+        "Domínio de tecnologias como React, Next.js, TypeScript, Angular, Docker, AWS e Flutter.",
+        "Desenvolvimento de projetos aplicando metodologias ágeis, integração contínua e deploy em ambientes cloud.",
+        "Criação de aplicações completas, desde o design system até a publicação na nuvem, utilizando microfrontends e práticas modernas de DevOps."
+      ],
+      "date": "Março 2025 - Dezembro 2025"
+    },
     "senac": {
       "title": "Senac RS",
       "role": "Tecnologia em Análise e Desenvolvimento de Sistemas",
