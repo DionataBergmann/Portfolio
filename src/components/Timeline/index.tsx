@@ -122,7 +122,7 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
               <FaExternalLinkAlt
                 color="white"
                 size={16}
-                style={{ position: 'relative', zIndex: 1 }}
+                style={{ position: 'absolute', zIndex: 1 }}
               />
             )}
           </Flex>
