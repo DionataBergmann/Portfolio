@@ -18,9 +18,10 @@
       "title": "CIGAM - Software de Gestão",
       "role": "Desenvolvedor Frontend Web",
       "description": [
-        "Desenvolvimento e manutenção de produtos internos, focando em melhorias e novas funcionalidades."
+        "Desenvolvimento e manutenção de sistemas web internos utilizando React e TypeScript.",
+        "Atuação em melhorias, correções e novas funcionalidades em soluções corporativas utilizadas por grandes empresas com alto volume de usuários."
       ],
-       "date": "Fevereiro 2025 - o Momento"
+      "date": "Fevereiro 2025 - o Momento"
     },
     "bridge": {
       "title": "Bridge MT como Outsourcing",
@@ -51,6 +52,17 @@
 
   "education": {
     "title": "Formação Acadêmica",
+    "fiap": {
+      "title": "FIAP",
+      "role": "MBA em Frontend Engineering",
+      "description": [
+        "Especialização prática em engenharia front-end, com foco em arquitetura de software, performance, testes, acessibilidade e integração com APIs.",
+        "Domínio de tecnologias como React, Next.js, TypeScript, Angular, Docker, AWS e Flutter.",
+        "Desenvolvimento de projetos aplicando metodologias ágeis, integração contínua e deploy em ambientes cloud.",
+        "Criação de aplicações completas, desde o design system até a publicação na nuvem, utilizando microfrontends e práticas modernas de DevOps."
+      ],
+      "date": "Março 2025 - Dezembro 2025"
+    },
     "senac": {
       "title": "Senac RS",
       "role": "Tecnologia em Análise e Desenvolvimento de Sistemas",
@@ -105,18 +117,18 @@
         "videoUrl": "https://youtu.be/TQsoWcfyJ8o"
       },
       "4": {
+        "title": "Bytebank",
+        "description": "Bytebank é um projeto web desenvolvido para a fase 1 do meu MBA em Engenharia Frontend na FIAP. Desenvolvido utilizando React, Next.js, Tailwind CSS, Material UI.",
+        "githubLink": "https://github.com/DionataBergmann/Bytebank",
+        "bgImage": "https://img.youtube.com/vi/SjfjRfZSjK0/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=SjfjRfZSjK0"
+      },
+      "5": {
         "title": "Farm Assist API",
         "description": "API desenvolvida com NestJS, GraphQL, PostgreSQL para atender às necessidades do frontend da aplicação, permitindo que proprietários e gerentes de fazendas monitorem e organizem as atividades diárias de seus funcionários. A API fornece suporte para a criação e gerenciamento de tarefas em tempo real, relatórios de produtividade em diferentes áreas e culturas, gerenciamento de armazenamento de grãos e envio de notificações aos usuários. Com uma arquitetura robusta e eficiente, a API oferece uma base sólida para o frontend, garantindo que as operações da fazenda sejam gerenciadas de forma produtiva e colaborativa.",
         "githubLink": "https://github.com/DionataBergmann/AgroFiveStar-API",
         "bgImage": "url('/insomnia.png')",
         "videoUrl": "https://www.youtube.com/watch?v=MHcePcAXmBU"
-      },
-      "5": {
-        "title": "Veja mais projetos",
-        "description": "Acesse meu repositório no GitHub para explorar mais projetos.",
-        "githubLink": "https://github.com/DionataBergmann",
-        "bgImage": "",
-        "videoUrl": ""
       }
     }
   },

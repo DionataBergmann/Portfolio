@@ -18,7 +18,8 @@
       "title": "CIGAM - Software de Gestão",
       "role": "Frontend Web Developer",
       "description": [
-        "Development and maintenance of internal products, focusing on improvements and new features."
+        "Development and maintenance of internal web systems using React and TypeScript.",
+        "Working on improvements, bug fixes, and new features in corporate solutions used by large companies with a high user volume."
       ],
       "date": "February 2025 - Present"
     },
@@ -52,6 +53,17 @@
 
   "education": {
     "title": "Academic Background",
+    "fiap": {
+      "title": "FIAP",
+      "role": "MBA in Frontend Engineering",
+      "description": [
+        "Hands-on specialization in front-end engineering, focusing on software architecture, performance, testing, accessibility, and API integration.",
+        "Proficiency in technologies such as React, Next.js, TypeScript, Angular, Docker, AWS, and Flutter.",
+        "Project development using agile methodologies, continuous integration, and cloud deployment.",
+        "Creation of complete applications, from design system to cloud publishing, leveraging microfrontends and modern DevOps practices."
+      ],
+      "date": "March 2025 - December 2025"
+    },
     "senac": {
       "title": "Senac RS",
       "role": "Technology in Analysis and Systems Development",
@@ -106,18 +118,18 @@
         "videoUrl": "https://youtu.be/TQsoWcfyJ8o"
       },
       "4": {
+        "title": "Bytebank",
+        "description": "Bytebank is a web project developed for Phase 1 of my MBA in Frontend Engineering at FIAP. Built using React, Next.js, Tailwind CSS, and Material UI.",
+        "githubLink": "https://github.com/DionataBergmann/Bytebank",
+        "bgImage": "https://img.youtube.com/vi/SjfjRfZSjK0/maxresdefault.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=SjfjRfZSjK0"
+      },
+      "5": {
         "title": "Farm Assist API",
         "description": "API developed with NestJS, GraphQL, PostgreSQL to meet the needs of the application's frontend, allowing farm owners and managers to monitor and organize their employees' daily activities. The API provides support for real-time task creation and management, productivity reports in different areas and crops, grain storage management, and sending notifications to users. With a robust and efficient architecture, the API offers a solid foundation for the frontend, ensuring that farm operations are managed productively and collaboratively.",
         "githubLink": "https://github.com/DionataBergmann/AgroFiveStar-API",
         "bgImage": "url('/insomnia.png')",
         "videoUrl": "https://www.youtube.com/watch?v=MHcePcAXmBU"
-      },
-      "5": {
-        "title": "More Projects",
-        "description": "Visit my GitHub repository to explore more of my projects.",
-        "githubLink": "https://github.com/DionataBergmann",
-        "bgImage": "",
-        "videoUrl": ""
       }
     }
   },
