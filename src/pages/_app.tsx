@@ -1,12 +1,18 @@
 import type { AppProps } from 'next/app';
+import { useEffect } from 'react';
 import { ChakraProvider, Flex } from '@chakra-ui/react';
 import Header from '@/components/Header';
 import theme from "../theme/theme";
 import CookiePopup from '@/components/CookiePopup';
-import { Analytics } from '@vercel/analytics/react'; 
+import { Analytics } from '@vercel/analytics/react';
+import { initFirebaseAnalytics } from '@/lib/firebase';
 import "../common/internationalization/i18n";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    initFirebaseAnalytics();
+  }, []);
+
   return (
     <ChakraProvider theme={theme} >
       <Header />
