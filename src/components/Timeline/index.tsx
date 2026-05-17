@@ -25,8 +25,19 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
   linkedinUrl
 }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const hasLink = Boolean(linkedinUrl?.trim());
+  const openLink = () => {
+    if (hasLink) window.open(linkedinUrl, '_blank');
+  };
 
   const isMobile = useBreakpointValue({ base: true, sm: true, md: true, lg: false });
+
+  const logoBoxProps = {
+    onClick: openLink,
+    onMouseEnter: () => setIsHovered(true),
+    onMouseLeave: () => setIsHovered(false),
+    cursor: hasLink ? 'pointer' : 'default',
+  } as const;
 
   return (
     <Flex
@@ -48,10 +59,7 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
           overflow="hidden"
           border="2px solid"
           borderColor="tertiary.500"
-          onClick={() => window.open(linkedinUrl, "_blank")}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          cursor="pointer"
+          {...logoBoxProps}
         >
           <Image
             src={logo}
@@ -60,12 +68,12 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
             height={60}
             style={{
               objectFit: 'cover',
-              filter: isHovered ? 'brightness(0.5)' : 'none',
+              filter: hasLink && isHovered ? 'brightness(0.5)' : 'none',
               transition: 'filter 0.3s ease',
               zIndex: 1
             }}
           />
-          {isHovered && (
+          {hasLink && isHovered && (
             <FaExternalLinkAlt
               color="white"
               size={16}
@@ -102,10 +110,7 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
             overflow="hidden"
             border='2px solid'
             borderColor='tertiary.500'
-            onClick={() => window.open(linkedinUrl, "_blank")}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            cursor="pointer"
+            {...logoBoxProps}
           >
             <Image
               src={logo}
@@ -114,11 +119,11 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
               height={55}
               style={{
                 objectFit: 'cover',
-                filter: isHovered ? 'brightness(0.5)' : 'none',
+                filter: hasLink && isHovered ? 'brightness(0.5)' : 'none',
                 transition: 'filter 0.3s ease',
               }}
             />
-            {isHovered && (
+            {hasLink && isHovered && (
               <FaExternalLinkAlt
                 color="white"
                 size={16}
