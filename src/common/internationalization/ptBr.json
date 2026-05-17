@@ -43,9 +43,12 @@
     "messageLabel": "Mensagem",
     "messagePlaceholder": "Sua Mensagem",
     "submitButton": "Enviar",
+    "submitting": "Enviando...",
     "toastError": "Por favor, preencha todos os campos.",
     "toastSuccess": "Mensagem enviada. Obrigado por entrar em contato!",
-    "toastSendError": "Erro ao enviar a mensagem."
+    "toastSendError": "Erro ao enviar a mensagem.",
+    "toastSendErrorFallback": "Não foi possível enviar. Tente novamente em instantes.",
+    "toastConfigError": "Configuração de e-mail ausente. Verifique as variáveis do EmailJS."
   },
 
   "cookie": {

@@ -43,9 +43,12 @@
     "messageLabel": "Message",
     "messagePlaceholder": "Your Message",
     "submitButton": "Send",
+    "submitting": "Sending...",
     "toastError": "Please fill out all fields.",
     "toastSuccess": "Message sent. Thank you for reaching out!",
-    "toastSendError": "Error sending the message."
+    "toastSendError": "Error sending the message.",
+    "toastSendErrorFallback": "Could not send your message. Please try again shortly.",
+    "toastConfigError": "Email configuration is missing. Check your EmailJS environment variables."
   },
 
   "cookie": {
