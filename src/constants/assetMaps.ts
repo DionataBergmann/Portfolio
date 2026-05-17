@@ -33,6 +33,7 @@ export const logoMap: Record<string, StaticImageData> = {
 };
 
 export const techMap: Record<string, StaticImageData> = {
+  react: rnLogo as StaticImageData,
   react_native: rnLogo as StaticImageData,
   js: jsLogo as StaticImageData,
   ts: tsLogo as StaticImageData,

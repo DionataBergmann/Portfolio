@@ -68,7 +68,7 @@ function docToEducation(doc: DocumentData, id: string): EducationItem {
 
 function docToProject(doc: DocumentData, id: string): ProjectItem {
   const d = doc as Record<string, unknown>;
-  return {
+  const item: ProjectItem = {
     id,
     order: (d.order as number) ?? 0,
     title: (d.title as LocalizedText) ?? { pt: '', en: '' },
@@ -77,6 +77,11 @@ function docToProject(doc: DocumentData, id: string): ProjectItem {
     bgImage: (d.bgImage as string) ?? '',
     videoUrl: (d.videoUrl as string) ?? '',
   };
+  if (d.subtitle) item.subtitle = d.subtitle as LocalizedText;
+  if (typeof d.featured === 'boolean') item.featured = d.featured;
+  if (d.highlights) item.highlights = d.highlights as LocalizedTextArray;
+  if (typeof d.liveUrl === 'string' && d.liveUrl.trim()) item.liveUrl = d.liveUrl.trim();
+  return item;
 }
 
 export interface CareerDataFromFirebase {
