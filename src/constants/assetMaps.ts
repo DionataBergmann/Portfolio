@@ -12,6 +12,7 @@ import brainnyLogo from '../../public/brainny.png';
 import senacLogo from '../../public/senac.jpg';
 import ufpelLogo from '../../public/ufpel.png';
 import fiapLogo from '../../public/fiap.png';
+import personalPicture from '../../public/personalPicture2.png';
 
 // Techs
 import rnLogo from '../../public/react_native.png';
@@ -22,6 +23,8 @@ import nestJsLogo from '../../public/nestjs.png';
 import nodeLogo from '../../public/node.png';
 import graphqlLogo from '../../public/graphql.png';
 import dockerLogo from '../../public/docker.png';
+import iosLogo from '../../public/ios.png';
+import androidLogo from '../../public/android.png';
 
 export const logoMap: Record<string, StaticImageData> = {
   cigam: cigamLogo as StaticImageData,
@@ -30,6 +33,7 @@ export const logoMap: Record<string, StaticImageData> = {
   senac: senacLogo as StaticImageData,
   ufpel: ufpelLogo as StaticImageData,
   fiap: fiapLogo as StaticImageData,
+  personal: personalPicture as StaticImageData,
 };
 
 export const techMap: Record<string, StaticImageData> = {
@@ -42,4 +46,6 @@ export const techMap: Record<string, StaticImageData> = {
   node: nodeLogo as StaticImageData,
   graphql: graphqlLogo as StaticImageData,
   docker: dockerLogo as StaticImageData,
+  ios: iosLogo as StaticImageData,
+  android: androidLogo as StaticImageData,
 };

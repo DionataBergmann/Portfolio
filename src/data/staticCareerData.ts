@@ -28,8 +28,39 @@ export const staticExperiences: ExperienceItem[] = [
     techKeys: ['react', 'ts'],
   },
   {
-    id: 'bridge',
+    id: 'consultoria-independente',
     order: 1,
+    title: {
+      pt: 'Consultoria independente',
+      en: 'Independent consulting',
+    },
+    role: {
+      pt: 'Consultor Full Stack (freelance)',
+      en: 'Full Stack Consultant (freelance)',
+    },
+    description: {
+      pt: [
+        'Publiquei e mantenho mais de 10 aplicativos na App Store e Play Store (Android e iOS): requisitos das lojas, correções, conformidade de SDK e evolução contínua em produção.',
+        'Implemento pagamentos no app com Apple IAP e Google Play Billing, incluindo configuração, testes e integração com backends de assinatura e compras.',
+        'Desenvolvo novas funcionalidades e integrações em web, mobile (React Native) e API (NestJS/Node, REST/GraphQL), com ownership ponta a ponta nas entregas.',
+      ],
+      en: [
+        'I have published and maintain 10+ apps on the App Store and Play Store (Android and iOS): store requirements, fixes, SDK compliance, and ongoing production evolution.',
+        'I implement in-app payments with Apple IAP and Google Play Billing, including setup, testing, and integration with subscription and purchase backends.',
+        'I build new features and integrations across web, mobile (React Native), and API (NestJS/Node, REST/GraphQL), with end-to-end ownership on deliveries.',
+      ],
+    },
+    date: {
+      pt: 'Julho 2025 - o Momento',
+      en: 'July 2025 - Present',
+    },
+    logoKey: 'personal',
+    linkedinUrl: 'https://www.linkedin.com/in/dionat%C3%A3-bergmann-a98387208/',
+    techKeys: ['react_native', 'ios', 'android', 'ts', 'nestjs', 'node', 'graphql'],
+  },
+  {
+    id: 'bridge',
+    order: 2,
     title: { pt: 'Bridge MT como Outsourcing', en: 'Bridge MT as Outsourcing' },
     role: { pt: 'Desenvolvedor Frontend Mobile', en: 'Frontend Mobile Developer' },
     description: {
@@ -54,7 +85,7 @@ export const staticExperiences: ExperienceItem[] = [
   },
   {
     id: 'brainny',
-    order: 2,
+    order: 3,
     title: { pt: 'Brainny Smart Solutions', en: 'Brainny Smart Solutions' },
     role: { pt: 'Desenvolvedor Frontend', en: 'Frontend Developer' },
     description: {
