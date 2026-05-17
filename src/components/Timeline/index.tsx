@@ -129,7 +129,12 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
         )}
 
         <Heading as="h3" size="lg" color="tertiary.200" fontSize="22px">{title}</Heading>
-        <Text fontSize="18px" color="tertiary.200" mb="8px">{role}</Text>
+        <Text fontSize="18px" color="tertiary.200" mb="4px">{role}</Text>
+        {date ? (
+          <Text fontSize="14px" color="primary.300" fontWeight="medium" mb="12px">
+            {date}
+          </Text>
+        ) : null}
         <Box fontSize="18px" color="gray.300" mb="16px">
           {description?.map((desc, index) => (
             <Text
@@ -145,7 +150,6 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
             </Text>
           ))}
         </Box>
-        <Text fontSize="14px" color="gray.500" mb="16px">{date}</Text>
         <HStack mt="8px">
           {techs.map((tech, index) => (
             <Image key={index} src={tech} alt="tech" width={30} height={30} />

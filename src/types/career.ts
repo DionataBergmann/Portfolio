@@ -37,8 +37,12 @@ export interface ProjectItem {
   id: string;
   order: number;
   title: LocalizedText;
+  subtitle?: LocalizedText;
   description: LocalizedText;
+  featured?: boolean;
+  highlights?: LocalizedTextArray;
   githubLink: string;
+  liveUrl?: string;
   bgImage: string;
   videoUrl: string;
 }
@@ -73,8 +77,12 @@ export interface ProjectItemResolved {
   id: string;
   order: number;
   title: string;
+  subtitle?: string;
   description: string;
+  featured: boolean;
+  highlights?: string[];
   githubLink: string;
+  liveUrl?: string;
   bgImage: string;
   videoUrl: string;
 }

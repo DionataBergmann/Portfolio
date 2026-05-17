@@ -9,134 +9,29 @@
   },
 
   "greeting": "Olá, eu sou o Dionatã Bergmann!",
-  "description": "Desenvolvedor Frontend Web e Mobile com 4 anos de experiência profissional, utilizando React, React Native com TypeScript e JavaScript, integrações em GraphQL e REST. Também apoiando no Backend em Node e NestJs sempre que necessário.",
+  "description": "Desenvolvedor Frontend Pleno · Web e Mobile com 4+ anos entregando produtos em React, React Native e TypeScript. Atuo em sistemas corporativos de alto volume, apps internacionais e soluções com microfrontends e integrações REST/GraphQL. MBA em Frontend Engineering (FIAP). Apoio o backend com Node e NestJS quando necessário.",
   "popover": "Clique para alterar!",
 
   "experience": {
-    "title": "Experiência Profissional",
-    "cigam": {
-      "title": "CIGAM - Software de Gestão",
-      "role": "Desenvolvedor Frontend Web",
-      "description": [
-        "Desenvolvimento e manutenção de sistemas web internos utilizando React e TypeScript.",
-        "Atuação em melhorias, correções e novas funcionalidades em soluções corporativas utilizadas por grandes empresas com alto volume de usuários."
-      ],
-      "date": "Fevereiro 2025 - o Momento"
-    },
-    "bridge": {
-      "title": "Bridge MT como Outsourcing",
-      "role": "Desenvolvedor Frontend Mobile",
-      "description": [
-        "Atuação em projetos internacionais.",
-        "Desenvolvimento e manutenção de aplicativos Android e iOS utilizando React Native em uma base de código de mais de 9 anos.",
-        "Recuperação e republicação de um aplicativo obsoleto (SDK 27), realizando as atualizações necessárias para torná-lo novamente compatível com os requisitos das lojas.",
-        "Implementação de melhorias de UX, usabilidade e responsividade.",
-        "Alteração da identidade visual, incluindo a redefinição de temas, imagens e layout.",
-        "Atualização de bibliotecas e dependências para garantir a conformidade com as versões mais recentes do SDK, atendendo aos requisitos das lojas."
-      ]
-    },
-    "brainny": {
-      "title": "Brainny Smart Solutions",
-      "role": "Desenvolvedor Frontend",
-      "description": [
-        "Atuação em mais de 15 projetos de diferentes propostas, incluindo projetos com média de 3 mil acessos diários, garantindo estabilidade, escalabilidade e otimização de performance.",
-        "Desenvolvimento e manutenção Full Stack de aplicações web responsivas e mobile utilizando React.js, NextJS, React Native e NestJS, com foco principal em Frontend.",
-        "Implementação de melhorias de UX e usabilidade, focando na criação de interfaces intuitivas e eficientes.",
-        "Publicação e atualização de aplicações mobile na Play Store e App Store.",
-        "Trabalho direto com clientes para manutenção contínua e conforme necessário de uma aplicação com usuários internacionais.",
-        "Colaboração com equipes ágeis utilizando a metodologia Scrum para garantir a entrega contínua e melhorias iterativas."
-      ],
-      "date": "Dezembro 2021 - Fevereiro 2025"
-    }
+    "title": "Experiência Profissional"
   },
 
   "education": {
-    "title": "Formação Acadêmica",
-    "fiap": {
-      "title": "FIAP",
-      "role": "MBA em Frontend Engineering",
-      "description": [
-        "Especialização prática em engenharia front-end, com foco em arquitetura de software, performance, testes, acessibilidade e integração com APIs.",
-        "Domínio de tecnologias como React, Next.js, TypeScript, Angular, Docker, AWS e Flutter.",
-        "Desenvolvimento de projetos aplicando metodologias ágeis, integração contínua e deploy em ambientes cloud.",
-        "Criação de aplicações completas, desde o design system até a publicação na nuvem, utilizando microfrontends e práticas modernas de DevOps."
-      ],
-      "date": "Março 2025 - Dezembro 2025"
-    },
-    "senac": {
-      "title": "Senac RS",
-      "role": "Tecnologia em Análise e Desenvolvimento de Sistemas",
-      "description": [
-        "Desenvolvi e aperfeiçoei minhas habilidades em desenvolvimento de software Full Stack, abrangendo Backend, Web, Mobile, UI/UX.",
-        "🥇 Dezembro de 2023 - Primeiro lugar geral no Hackathon com o projeto ",
-        "🥈 Dezembro de 2022 - Segundo lugar geral no Hackathon com o projeto ",
-        "💼 Dezembro de 2021 - Fui convidado a estagiar na Brainny pelo CTO da empresa, que também foi meu professor e coordenador."
-      ],
-      "date": "Março 2020 - Dezembro 2023"
-    },
-    "ufpel": {
-      "title": "Universidade Federal de Pelotas",
-      "role": "Engenharia de Computação",
-      "description": [
-        "Foco em algoritmos, lógica, estruturas de dados.",
-        "Decidi transferir meu foco para o curso de Análise e Desenvolvimento de Sistemas no Senac, para alinhar melhor minha formação com minhas oportunidades de trabalho."
-      ],
-      "date": "Março 2019 - Dezembro 2021"
-    }
+    "title": "Formação Acadêmica"
   },
 
   "projects": {
     "title": "Meus Projetos",
-    "data": {
-      "0": {
-        "title": "Portfólio",
-        "description": "Meu Portfólio é uma aplicação moderna e interativa, projetada para destacar minhas habilidades, experiências e projetos como desenvolvedor. Construído com Next.js e React, a plataforma reflete princípios de design responsivo e uma navegação fluida, garantindo uma experiência envolvente para os visitantes.",
-        "githubLink": "https://github.com/DionataBergmann/Portfolio",
-        "bgImage": "url('/home.png')",
-        "videoUrl": "https://youtu.be/TEU5gEqXnQg"
-      },
-      "1": {
-        "title": "News Hub",
-        "description": "O News Hub é um portal de notícias, projetado para manter os usuários informados com as últimas notícias de forma acessível e envolvente. Construída com React e Next.js, a plataforma integra-se com APIs públicas para fornecer notícias em tempo real e dados meteorológicos. Os usuários podem explorar notícias por categoria, aplicar filtros e se manter atualizados com as previsões meteorológicas atuais. Aproveitando a IA por meio da API OpenAI, o NewsHub gera resumos concisos dos cinco principais artigos da categoria digitada. Esses resumos são então convertidos em áudio, permitindo que os usuários ouçam atualizações breves de notícias diretamente na plataforma, tornando-a perfeita para se manter informado em qualquer lugar.",
-        "githubLink": "https://github.com/DionataBergmann/NewsHub",
-        "bgImage": "https://img.youtube.com/vi/dVwqEofGZPs/maxresdefault.jpg",
-        "videoUrl": "https://youtu.be/dVwqEofGZPs"
-      },
-      "2": {
-        "title": "Farm Assist App",
-        "description": "Farm Assist App é um aplicativo móvel criado com React Native. Este projeto tem como objetivo fornecer aos usuários que são funcionários de uma fazenda uma maneira perfeita de gerenciar e visualizar suas tarefas diárias de forma eficiente. Ele inclui recursos como a criação de tarefas por meio do sistema web gerenciado pelo proprietário, bem como a criação de tarefas pelos próprios funcionários e a visualização de relatórios sobre o progresso das tarefas.",
-        "githubLink": "https://github.com/DionataBergmann/AgroFiveStar-APP",
-        "bgImage": "https://img.youtube.com/vi/bKxBzCzjNBg/maxresdefault.jpg",
-        "videoUrl": "https://youtu.be/bKxBzCzjNBg"
-      },
-      "3": {
-        "title": "Farm Assist Web",
-        "description": "Farm Assist é um aplicativo web desenvolvido com React e NestJS. Este projeto foi criado para fornecer aos proprietários e gerentes de fazendas uma maneira eficiente de organizar e monitorar as atividades diárias de seus funcionários. A versão web permite que os proprietários criem e gerenciem tarefas em tempo real, conforme são realizadas pelos funcionários. Ele também fornece relatórios de produtividade em diferentes áreas e culturas, gerenciamento de armazenamento de grãos e criação de notificações para usuários. Com uma interface amigável, o sistema garante um gerenciamento mais produtivo e colaborativo das operações da fazenda.",
-        "githubLink": "https://github.com/DionataBergmann/AgroFiveStar-WEB",
-        "bgImage": "https://img.youtube.com/vi/TQsoWcfyJ8o/maxresdefault.jpg",
-        "videoUrl": "https://youtu.be/TQsoWcfyJ8o"
-      },
-      "4": {
-        "title": "Bytebank",
-        "description": "Bytebank é um projeto web desenvolvido para a fase 1 do meu MBA em Engenharia Frontend na FIAP. Desenvolvido utilizando React, Next.js, Tailwind CSS, Material UI.",
-        "githubLink": "https://github.com/DionataBergmann/Bytebank",
-        "bgImage": "https://img.youtube.com/vi/SjfjRfZSjK0/maxresdefault.jpg",
-        "videoUrl": "https://www.youtube.com/watch?v=SjfjRfZSjK0"
-      },
-      "5": {
-        "title": "Farm Assist API",
-        "description": "API desenvolvida com NestJS, GraphQL, PostgreSQL para atender às necessidades do frontend da aplicação, permitindo que proprietários e gerentes de fazendas monitorem e organizem as atividades diárias de seus funcionários. A API fornece suporte para a criação e gerenciamento de tarefas em tempo real, relatórios de produtividade em diferentes áreas e culturas, gerenciamento de armazenamento de grãos e envio de notificações aos usuários. Com uma arquitetura robusta e eficiente, a API oferece uma base sólida para o frontend, garantindo que as operações da fazenda sejam gerenciadas de forma produtiva e colaborativa.",
-        "githubLink": "https://github.com/DionataBergmann/AgroFiveStar-API",
-        "bgImage": "url('/insomnia.png')",
-        "videoUrl": "https://www.youtube.com/watch?v=MHcePcAXmBU"
-      }
-    }
+    "details": "Detalhes",
+    "showMore": "Mostrar mais",
+    "showLess": "Mostrar menos",
+    "visitSite": "Ver site"
   },
 
   "aboutMe": {
     "title": "Sobre mim",
     "imageAlt": "Dionatã Bergmann",
-    "description": "Meu primeiro contato com a programação foi em 2015, quando criei um servidor de Minecraft que rapidamente se popularizou chegando a 90 players simultâneos. Mas a área de tecnologia não era tão difundida, ainda mais para um jovem do interior. Após concluir o ensino médio em 2017, passei por diversos cursos em busca de algo que realmente me conectasse e em 2019 na área da Tecnologia foi onde encontrei a oportunidade de dar vida às minhas ideias e criar soluções inovadoras. Meu objetivo é continuar aprendendo e crescendo como desenvolvedor Frontend, contribuindo para a criação de produtos digitais que façam a diferença."
+    "description": "Meu primeiro contato com programação foi em 2015, com um servidor de Minecraft que chegou a 90 jogadores simultâneos. Depois do ensino médio, busquei uma área que unisse criatividade e impacto — em 2019 encontrei isso em tecnologia. Desde então atuo em produtos reais: de consultoria com mais de 15 projetos e ~3 mil acessos/dia até ERP corporativo e apps mobile internacionais. Hoje combino entrega em produção com estudo contínuo (MBA FIAP em Frontend Engineering), com foco em arquitetura front-end, performance, acessibilidade e experiência do usuário."
   },
 
   "contact": {

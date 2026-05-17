@@ -11,20 +11,29 @@ class MyDocument extends Document {
           />
           <meta
             name="description"
-            content="Portfólio de desenvolvedor web e mobile com experiência em React, NextJs, React Native."
+            content="Dionatã Bergmann — Frontend Pleno · React, React Native e TypeScript · ERP corporativo, microfrontends e MBA FIAP em Frontend Engineering."
           />
           <meta
             name="keywords"
-            content="React, React Native, Desenvolvedor, Portfólio, Web, Mobile, Frontend, Front end"
+            content="TypeScript, React, React Native, NestJS, GraphQL, microfrontends, acessibilidade, Frontend Pleno, Dionatã Bergmann"
           />
           <meta name="author" content="Dionatã Bergmann" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-          <meta property="og:title" content="Portfólio de Desenvolvedor Web e Mobile" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Dionatã Bergmann — Frontend Pleno" />
           <meta
             property="og:description"
-            content="Portfólio de desenvolvedor com experiência em React, Next.js e React Native."
+            content="Desenvolvedor Frontend Pleno · Web e Mobile com React, React Native e TypeScript. ERP corporativo, apps internacionais, microfrontends e integrações REST/GraphQL."
           />
+          <meta property="og:image" content="/personalPicture2.png" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Dionatã Bergmann — Frontend Pleno" />
+          <meta
+            name="twitter:description"
+            content="Desenvolvedor Frontend Pleno · React, React Native, TypeScript, microfrontends e MBA FIAP."
+          />
+          <meta name="twitter:image" content="/personalPicture2.png" />
 
           <link rel="icon" href="/favicon.ico" />
 

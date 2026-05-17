@@ -1,4 +1,3 @@
-import AboutSection from "@/components/About";
 import ContactSection from "@/components/ContactSection";
 import EducationSection from "@/components/EducationSection";
 import ExperienceSection from "@/components/ExperienceSection";
