@@ -2,12 +2,41 @@ import React from 'react';
 import { Box, Flex, Heading } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 import { TimelineItem } from '../Timeline';
-import senacLogo from '../../../public/senac.jpg';
-import ufpelLogo from '../../../public/ufpel.png';
-import fiapLogo from '../../../public/fiap.png';
+import { useCareerData } from '@/hooks/useCareerData';
+import { logoMap } from '@/constants/assetMaps';
 
 const EducationSection = () => {
   const { t } = useTranslation();
+  const { education } = useCareerData();
+
+  const buildDescription = (item: (typeof education)[0]): (string | React.ReactNode)[] => {
+    const desc = item.description;
+    const links = item.descriptionLinks ?? [];
+    if (links.length === 0) return desc;
+
+    const result: (string | React.ReactNode)[] = [];
+    let lastIndex = 0;
+    links.forEach((link) => {
+      for (let i = lastIndex; i < link.index; i++) result.push(desc[i]);
+      result.push(
+        <>
+          {desc[link.index]}
+          <a
+            style={{ marginLeft: 5, textDecoration: 'underline' }}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {link.label}
+          </a>
+          .
+        </>
+      );
+      lastIndex = link.index + 1;
+    });
+    for (let i = lastIndex; i < desc.length; i++) result.push(desc[i]);
+    return result;
+  };
 
   return (
     <Flex
@@ -31,63 +60,19 @@ const EducationSection = () => {
         h="85%"
         zIndex={1}
       />
-       <TimelineItem
-        title={t('education.fiap.title')}
-        role={t('education.fiap.role')}
-        description={t('education.fiap.description', { returnObjects: true }) as string[]}
-        date={t('education.fiap.date')}
-        techs={[]}
-        logo={fiapLogo}
-        linkedinUrl="https://www.linkedin.com/school/fiap/"
-        isLeft={true}
-      />
-      <TimelineItem
-        title={t('education.senac.title')}
-        role={t('education.senac.role')}
-        description={[
-          t('education.senac.description.0'),
-          <>
-            {t('education.senac.description.1')}
-            <a
-              style={{ marginLeft: 5, textDecoration: 'underline' }}
-              href="https://github.com/neto-virtual/NetoExtension"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Neto Virtual
-            </a>
-            .
-          </>,
-          <>
-            {t('education.senac.description.2')}
-            <a
-              style={{ marginLeft: 5, textDecoration: 'underline' }}
-              href="https://github.com/DionataBergmann/easilyMobile"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Easily
-            </a>
-            .
-          </>,
-          t('education.senac.description.3')
-        ]}
-        date={t('education.senac.date')}
-        techs={[]}
-        logo={senacLogo}
-        linkedinUrl=""
-        isLeft={false}
-      />
-      <TimelineItem
-        title={t('education.ufpel.title')}
-        role={t('education.ufpel.role')}
-        description={t('education.ufpel.description', { returnObjects: true }) as string[]}
-        date={t('education.ufpel.date')}
-        techs={[]}
-        logo={ufpelLogo}
-        linkedinUrl="https://www.linkedin.com/school/universidade-federal-de-pelotas/"
-        isLeft={true}
-      />
+      {education.map((edu, index) => (
+        <TimelineItem
+          key={edu.id}
+          title={edu.title}
+          role={edu.role}
+          description={buildDescription(edu)}
+          date={edu.date}
+          techs={[]}
+          logo={logoMap[edu.logoKey] ?? logoMap.senac}
+          linkedinUrl={edu.linkedinUrl}
+          isLeft={index % 2 === 0}
+        />
+      ))}
     </Flex>
   );
 };
