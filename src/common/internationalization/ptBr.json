@@ -14,7 +14,9 @@
     "description": "Desenvolvedor Front-end e Mobile Pleno com React, Next.js, React Native e TypeScript. ERP corporativo, microfrontends, apps publicados na App Store e no Google Play e MBA em Engenharia Frontend pela FIAP."
   },
   "description": "Desenvolvedor Front-end e Mobile Pleno com mais de 4 anos de experiência em produtos com React, Next.js, React Native e TypeScript. Atuo em ERP corporativo de alto tráfego, migração para microfrontends e apps internacionais publicados na App Store e no Google Play, com integrações REST e GraphQL. MBA em Engenharia Frontend pela FIAP. Também apoio o backend com Node.js e NestJS.",
-  "popover": "Clique para alterar!",
+  "language": {
+    "label": "Idioma"
+  },
 
   "experience": {
     "title": "Experiência Profissional"

@@ -12,46 +12,21 @@ import {
   useBreakpointValue,
   useDisclosure,
   VStack,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverArrow,
-  PopoverBody,
 } from "@chakra-ui/react";
 import CustomButton from "../Button";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { RxHamburgerMenu } from "react-icons/rx";
-import Flag from "react-world-flags";
 import { useTranslation } from "react-i18next";
-import { t } from "i18next";
-import { PulsingClickIcon } from "../PulsingClickIcon";
+import { setAppLanguage, type AppLanguage } from "@/common/internationalization/i18n";
 
 function Header() {
   const [activeButton, setActiveButton] = useState<string | null>("home");
   const router = useRouter();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const isMobile = useBreakpointValue({ base: true, md: false });
-  const { i18n } = useTranslation();
-
-  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
-
-  useEffect(() => {
-    let closeTimer: ReturnType<typeof setTimeout>;
-
-    const openTimer = setTimeout(() => {
-      setIsPopoverOpen(true);
-
-      closeTimer = setTimeout(() => {
-        setIsPopoverOpen(false);
-      }, 5000);
-    }, 3000);
-
-    return () => {
-      clearTimeout(openTimer);
-      if (closeTimer) clearTimeout(closeTimer);
-    };
-  }, []);
+  const { t, i18n } = useTranslation();
+  const isPortuguese = i18n.language.toLowerCase().startsWith("pt");
 
   useEffect(() => {
     const handleRouteChangeComplete = () => {
@@ -106,9 +81,10 @@ function Header() {
     };
   }, []);
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === "en" ? "pt-BR" : "en";
-    i18n.changeLanguage(newLang);
+  const selectLanguage = (lang: AppLanguage) => {
+    const active = lang === "pt-BR" ? isPortuguese : !isPortuguese;
+    if (active) return;
+    void setAppLanguage(lang);
   };
 
   const renderButtons = () => (
@@ -166,40 +142,50 @@ function Header() {
       justifyContent={isMobile ? "space-between" : "space-around"}
       boxShadow="md"
     >
-      <Flex alignItems="center">
-        <Box position="relative" display="flex" alignItems="center">
-          <Box
-            cursor="pointer"
-            onClick={toggleLanguage}
-            display="flex"
-            alignItems="center"
-          >
-            {i18n.language === "en" ? (
-              <Flag
-                code="BR"
-                style={{ width: 30, height: 20, marginRight: 8, marginLeft: 4 }}
-              />
-            ) : (
-              <Flag
-                code="US"
-                style={{ width: 30, height: 20, marginRight: 8, marginLeft: 4 }}
-              />
-            )}
-          </Box>
-          {isPopoverOpen && (
-            <Box
-              position="absolute"
-              top="100%"
-              left="54%"
-              transform="translateX(-50%)"
-              mt="2px"
-            >
-              <PulsingClickIcon />
-            </Box>
-          )}
-        </Box>
+      <Flex alignItems="center" minW={0}>
+        <Flex
+          role="group"
+          aria-label={t("language.label")}
+          borderWidth="1px"
+          borderColor="whiteAlpha.700"
+          borderRadius="md"
+          overflow="hidden"
+          flexShrink={0}
+          ml={2}
+          mr={3}
+        >
+          {(
+            [
+              { code: "pt-BR", label: "PT" },
+              { code: "en", label: "EN" },
+            ] as const
+          ).map(({ code, label }) => {
+            const active = code === "pt-BR" ? isPortuguese : !isPortuguese;
 
-        <Text ml={1} fontSize="16px" fontWeight="bold" color="white">
+            return (
+              <Box
+                as="button"
+                type="button"
+                key={code}
+                onClick={() => selectLanguage(code)}
+                aria-pressed={active}
+                px={2}
+                py="6px"
+                fontSize="13px"
+                fontWeight="bold"
+                letterSpacing="0.04em"
+                lineHeight="1"
+                color={active ? "tertiary.900" : "white"}
+                bg={active ? "white" : "transparent"}
+                _hover={{ bg: active ? "white" : "whiteAlpha.300" }}
+              >
+                {label}
+              </Box>
+            );
+          })}
+        </Flex>
+
+        <Text fontSize="16px" fontWeight="bold" color="white" noOfLines={1}>
           Dionatã Bergmann
         </Text>
       </Flex>

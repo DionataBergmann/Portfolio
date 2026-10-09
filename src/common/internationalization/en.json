@@ -14,7 +14,9 @@
     "description": "Frontend and Mobile Engineer with React, Next.js, React Native, and TypeScript. Enterprise ERP, micro-frontends, apps on the App Store and Google Play, and an MBA in Frontend Engineering from FIAP."
   },
   "description": "Frontend and Mobile Engineer with 4+ years of experience building products with React, Next.js, React Native, and TypeScript. I work on high-traffic enterprise ERP software, micro-frontend migrations, and international apps published on the App Store and Google Play, with REST and GraphQL integrations. MBA in Frontend Engineering (FIAP). I also support backend work with Node.js and NestJS.",
-  "popover": "Click to change!",
+  "language": {
+    "label": "Language"
+  },
 
   "experience": {
     "title": "Professional Experience"
