@@ -6,9 +6,7 @@
 
 import {
   collection,
-  getDocs,
-  query,
-  orderBy,
+  getDocsFromServer,
   type DocumentData,
   type QuerySnapshot,
 } from 'firebase/firestore';
@@ -27,15 +25,46 @@ const COLLECTIONS = {
   projects: 'projects',
 } as const;
 
+function asStringArray(value: unknown): string[] {
+  if (Array.isArray(value)) {
+    return value.filter((item): item is string => typeof item === 'string');
+  }
+
+  if (value && typeof value === 'object') {
+    return Object.keys(value)
+      .sort((a, b) => Number(a) - Number(b))
+      .map((key) => (value as Record<string, unknown>)[key])
+      .filter((item): item is string => typeof item === 'string');
+  }
+
+  return [];
+}
+
+function asLocalizedText(value: unknown): LocalizedText {
+  const record = value && typeof value === 'object' ? (value as Record<string, unknown>) : {};
+  return {
+    pt: typeof record.pt === 'string' ? record.pt : '',
+    en: typeof record.en === 'string' ? record.en : '',
+  };
+}
+
+function asLocalizedTextArray(value: unknown): LocalizedTextArray {
+  const record = value && typeof value === 'object' ? (value as Record<string, unknown>) : {};
+  return {
+    pt: asStringArray(record.pt),
+    en: asStringArray(record.en),
+  };
+}
+
 function docToExperience(doc: DocumentData, id: string): ExperienceItem {
   const d = doc as Record<string, unknown>;
   return {
     id,
-    order: (d.order as number) ?? 0,
-    title: (d.title as LocalizedText) ?? { pt: '', en: '' },
-    role: (d.role as LocalizedText) ?? { pt: '', en: '' },
-    description: (d.description as LocalizedTextArray) ?? { pt: [], en: [] },
-    date: (d.date as LocalizedText) ?? { pt: '', en: '' },
+    order: typeof d.order === 'number' ? d.order : 0,
+    title: asLocalizedText(d.title),
+    role: asLocalizedText(d.role),
+    description: asLocalizedTextArray(d.description),
+    date: asLocalizedText(d.date),
     logoKey: (d.logoKey as string) ?? '',
     linkedinUrl: (d.linkedinUrl as string) ?? '',
     techKeys: Array.isArray(d.techKeys) ? (d.techKeys as string[]) : [],
@@ -47,10 +76,10 @@ function docToEducation(doc: DocumentData, id: string): EducationItem {
   const item: EducationItem = {
     id,
     order: (d.order as number) ?? 0,
-    title: (d.title as LocalizedText) ?? { pt: '', en: '' },
-    role: (d.role as LocalizedText) ?? { pt: '', en: '' },
-    description: (d.description as LocalizedTextArray) ?? { pt: [], en: [] },
-    date: (d.date as LocalizedText) ?? { pt: '', en: '' },
+    title: asLocalizedText(d.title),
+    role: asLocalizedText(d.role),
+    description: asLocalizedTextArray(d.description),
+    date: asLocalizedText(d.date),
     logoKey: (d.logoKey as string) ?? '',
     linkedinUrl: (d.linkedinUrl as string) ?? '',
   };
@@ -71,8 +100,8 @@ function docToProject(doc: DocumentData, id: string): ProjectItem {
   const item: ProjectItem = {
     id,
     order: (d.order as number) ?? 0,
-    title: (d.title as LocalizedText) ?? { pt: '', en: '' },
-    description: (d.description as LocalizedText) ?? { pt: '', en: '' },
+    title: asLocalizedText(d.title),
+    description: asLocalizedText(d.description),
     githubLink: (d.githubLink as string) ?? '',
     bgImage: (d.bgImage as string) ?? '',
     videoUrl: (d.videoUrl as string) ?? '',
@@ -97,9 +126,9 @@ export async function fetchCareerFromFirebase(): Promise<CareerDataFromFirebase 
 
   try {
     const [expSnap, eduSnap, projSnap] = await Promise.all([
-      getDocs(query(collection(db, COLLECTIONS.experiences), orderBy('order', 'asc'))),
-      getDocs(query(collection(db, COLLECTIONS.education), orderBy('order', 'asc'))),
-      getDocs(query(collection(db, COLLECTIONS.projects), orderBy('order', 'asc'))),
+      getDocsFromServer(collection(db, COLLECTIONS.experiences)),
+      getDocsFromServer(collection(db, COLLECTIONS.education)),
+      getDocsFromServer(collection(db, COLLECTIONS.projects)),
     ]);
 
     const experiences = (expSnap as QuerySnapshot<DocumentData>).docs.map((doc) =>
@@ -113,7 +142,8 @@ export async function fetchCareerFromFirebase(): Promise<CareerDataFromFirebase 
     );
 
     return { experiences, education, projects };
-  } catch {
+  } catch (error) {
+    console.error('Não foi possível ler o Firestore. O site usou o texto local.', error);
     return null;
   }
 }

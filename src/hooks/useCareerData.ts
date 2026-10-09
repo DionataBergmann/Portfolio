@@ -38,7 +38,7 @@ function pickLocalizedArray(
   };
 }
 
-/** Lista do static = fonte da verdade (ordem e ids). Firestore só preenche lacunas. */
+/** A ordem e os ids vêm do código. O texto editado no Firestore substitui o texto local. */
 function mergeFromStatic<T extends { id: string }>(
   firebase: T[],
   staticItems: T[],

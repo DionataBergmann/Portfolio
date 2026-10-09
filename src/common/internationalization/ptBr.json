@@ -9,8 +9,14 @@
   },
 
   "greeting": "Olá, eu sou o Dionatã Bergmann!",
-  "description": "Desenvolvedor Frontend Pleno · Web e Mobile com 4+ anos entregando produtos em React, React Native e TypeScript. Atuo em sistemas corporativos de alto volume, apps internacionais e soluções com microfrontends e integrações REST/GraphQL. MBA em Frontend Engineering (FIAP). Apoio o backend com Node e NestJS quando necessário.",
-  "popover": "Clique para alterar!",
+  "meta": {
+    "title": "Dionatã Bergmann — Desenvolvedor Front-end e Mobile Pleno",
+    "description": "Desenvolvedor Front-end e Mobile Pleno com React, Next.js, React Native e TypeScript. ERP corporativo, microfrontends, apps publicados na App Store e no Google Play e MBA em Engenharia Frontend pela FIAP."
+  },
+  "description": "Desenvolvedor Front-end e Mobile Pleno com mais de 4 anos de experiência em produtos com React, Next.js, React Native e TypeScript. Atuo em ERP corporativo de alto tráfego, migração para microfrontends e apps internacionais publicados na App Store e no Google Play, com integrações REST e GraphQL. MBA em Engenharia Frontend pela FIAP. Também apoio o backend com Node.js e NestJS.",
+  "language": {
+    "label": "Idioma"
+  },
 
   "experience": {
     "title": "Experiência Profissional"
@@ -31,7 +37,7 @@
   "aboutMe": {
     "title": "Sobre mim",
     "imageAlt": "Dionatã Bergmann",
-    "description": "Meu primeiro contato com programação foi em 2015, com um servidor de Minecraft que chegou a 90 jogadores simultâneos. Depois do ensino médio, busquei uma área que unisse criatividade e impacto — em 2019 encontrei isso em tecnologia. Desde então atuo em produtos reais: de consultoria com mais de 15 projetos e ~3 mil acessos/dia até ERP corporativo e apps mobile internacionais. Hoje combino entrega em produção com estudo contínuo (MBA FIAP em Frontend Engineering), com foco em arquitetura front-end, performance, acessibilidade e experiência do usuário."
+    "description": "Meu primeiro contato com programação foi em 2015, com um servidor de Minecraft que chegou a 90 jogadores simultâneos. Depois do ensino médio, busquei uma área que unisse criatividade e impacto, e em 2019 encontrei isso na tecnologia. Desde então, trabalhei em produtos reais: de uma consultoria com mais de 15 projetos e 3.000 usuários ativos diários a ERP corporativo e apps mobile internacionais, com mais de 10 aplicativos publicados nas lojas. Hoje equilibro entregas em produção com aprendizado contínuo (MBA em Engenharia Frontend pela FIAP), com foco em arquitetura front-end, performance, acessibilidade e experiência do usuário."
   },
 
   "contact": {

@@ -9,8 +9,14 @@
   },
 
   "greeting": "Hello, I am Dionatã Bergmann!",
-  "description": "Mid-level Frontend Engineer · Web and Mobile with 4+ years shipping products in React, React Native, and TypeScript. I work on high-traffic corporate systems, international apps, and microfrontend architectures with REST/GraphQL integrations. MBA in Frontend Engineering (FIAP). I support backend work with Node and NestJS when necessary.",
-  "popover": "Click to change!",
+  "meta": {
+    "title": "Dionatã Bergmann — Frontend and Mobile Engineer",
+    "description": "Frontend and Mobile Engineer with React, Next.js, React Native, and TypeScript. Enterprise ERP, micro-frontends, apps on the App Store and Google Play, and an MBA in Frontend Engineering from FIAP."
+  },
+  "description": "Frontend and Mobile Engineer with 4+ years of experience building products with React, Next.js, React Native, and TypeScript. I work on high-traffic enterprise ERP software, micro-frontend migrations, and international apps published on the App Store and Google Play, with REST and GraphQL integrations. MBA in Frontend Engineering (FIAP). I also support backend work with Node.js and NestJS.",
+  "language": {
+    "label": "Language"
+  },
 
   "experience": {
     "title": "Professional Experience"
@@ -31,7 +37,7 @@
   "aboutMe": {
     "title": "About Me",
     "imageAlt": "Dionatã Bergmann",
-    "description": "My first contact with programming was in 2015, with a Minecraft server that reached 90 simultaneous players. After high school, I looked for a field that combined creativity and impact — in 2019 I found that in technology. Since then I've worked on real products: from consultancy with 15+ projects and ~3k daily visits to corporate ERP and international mobile apps. Today I balance production delivery with continuous learning (FIAP MBA in Frontend Engineering), focusing on front-end architecture, performance, accessibility, and user experience."
+    "description": "My first contact with programming was in 2015, with a Minecraft server that reached 90 simultaneous players. After high school, I looked for a field that combined creativity and impact, and in 2019 I found it in technology. Since then, I've worked on real products: from consulting with 15+ projects and 3,000+ daily active users to enterprise ERP software and international mobile apps, with 10+ apps published on the stores. Today I balance production delivery with continuous learning (FIAP MBA in Frontend Engineering), focusing on front-end architecture, performance, accessibility, and user experience."
   },
 
   "contact": {
