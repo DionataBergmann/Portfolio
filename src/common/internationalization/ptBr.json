@@ -13,7 +13,7 @@
     "title": "Dionatã Bergmann — Desenvolvedor Front-end e Mobile Pleno",
     "description": "Desenvolvedor Front-end e Mobile Pleno com React, Next.js, React Native e TypeScript. ERP corporativo, microfrontends, apps publicados na App Store e no Google Play e MBA em Engenharia Frontend pela FIAP."
   },
-  "description": "Desenvolvedor Front-end e Mobile Pleno com mais de 4 anos de experiência em produtos com React, Next.js, React Native e TypeScript. Atuo em ERP corporativo de alto tráfego, migração para microfrontends e apps internacionais publicados na App Store e no Google Play, com integrações REST e GraphQL. MBA em Engenharia Frontend pela FIAP. Também apoio o backend com Node.js e NestJS.",
+  "description": "Desenvolvedor Front-end e Mobile Pleno com mais de 5 anos de experiência em produtos com React, Next.js, React Native e TypeScript. Atuo em ERP corporativo de alto tráfego, migração para microfrontends e apps internacionais publicados na App Store e no Google Play, com integrações REST e GraphQL. MBA em Engenharia Frontend pela FIAP. Também apoio o backend com Node.js e NestJS.",
   "language": {
     "label": "Idioma"
   },
@@ -55,6 +55,10 @@
     "toastSendError": "Erro ao enviar a mensagem.",
     "toastSendErrorFallback": "Não foi possível enviar. Tente novamente em instantes.",
     "toastConfigError": "Configuração de e-mail ausente. Verifique as variáveis do EmailJS."
+  },
+
+  "footer": {
+    "copyright": "© {{year}} Dionatã Bergmann. Todos os direitos reservados."
   },
 
   "cookie": {
